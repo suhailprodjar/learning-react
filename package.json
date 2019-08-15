@@ -1,0 +1,39 @@
+{
+  "name": "prodjar-web",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://prodjar.herokuapp.com/",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-router-dom": "^4.4.0",
+    "react-scripts": "2.1.5",
+    "react-scroll": "^1.7.11"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "node-sass-chokidar": "^1.3.4",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "sass": "^1.17.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "yarn public-css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "public-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o public/",
+    "public-sync": "yarn && browser-sync start -s --serveStatic 'public' --files 'public' --port 4000"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
