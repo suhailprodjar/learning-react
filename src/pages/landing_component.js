@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import Content from './content/content_component';
+import Content from './content/content';
 
 export default class LandingComponent extends Component {
     render() {
         return (
-            <Fragment>
+            <div className="content-wrap">
                 <Content/>
-            </Fragment>
+            </div>
         )
     }
 }
