@@ -72,6 +72,25 @@
       padding: 0 24px;
       text-align: center;
       width: 100%;
+      opacity: 0;
+      animation: fadeInanimtion 0.4s ease-in 0;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+
+      @keyframes fadeInanimtion {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
 
       @media ($sm) {
         text-align: left;
