@@ -71,19 +71,20 @@
     "copy:css:prod": "yarn copy:css:build && yarn copy:bootstrap:build",
     
     "start": "node build/bundle.js",
-    "build": "rm -rf build && rm -rf public && webpack  --config webpack.server.js && webpack -p --config webpack.client.prod.js --mode production && yarn copy:css:prod && yarn copy:css:client",
+    "build": "rm -rf build && rm -rf public && webpack  --config webpack.server.js && webpack -p --config webpack.client.prod.js --mode production && yarn run-css && yarn copy:css:prod && yarn copy:css:client",
     "heroku-postbuild": "npm install && npm run build",
     
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "build-client": "webpack --config webpack.client.js && yarn build-css && yarn export-css && yarn copy:css:client",
+    "build-client": "webpack --config webpack.client.js && yarn run-css && yarn copy:css:client",
     "local-start": "npm run build-client && npm-run-all --parallel dev:*",
     
     "precommit": "pretty-quick --staged",
     
     "build-css": "node-sass-chokidar --include-path ./styles --include-path ./node_modules styles/ -o styles/",
     "export-css": "node-sass-chokidar --include-path ./styles --include-path ./node_modules styles/ -o markup/",
-    "markup": "yarn build-css && yarn export-css yarn && browser-sync start -s --serveStatic 'markup' --files 'markup' --port 4000"
+    "run-css": "yarn build-css && yarn export-css",
+    "markup": "yarn run-css yarn && browser-sync start -s --serveStatic 'markup' --files 'markup' --port 4000"
   }
 }
