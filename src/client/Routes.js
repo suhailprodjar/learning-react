@@ -1,23 +1,14 @@
-import HomePage from "./pages/HomePage";
-import NotFoundPage from "./pages/NotFoundPage";
-import ArticleListPage from "./pages/ArticleListPage";
+import HomePage from "./pages/home";
 import App from "./App";
 
 export default [
   {
-    ...App,
+    component: App,
     routes: [
       {
-        ...HomePage,
+        component: HomePage,
         path: "/",
         exact: true
-      },
-      {
-        path: "/articles/:id",
-        ...ArticleListPage
-      },
-      {
-        ...NotFoundPage
       }
     ]
   }
