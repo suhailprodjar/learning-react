@@ -1,18 +1,21 @@
 @font-face {
-  font-family: "prodjar";
-  src: url("fonts/prodjar.eot?eot2p6");
-  src: url("fonts/prodjar.eot?eot2p6#iefix") format("embedded-opentype"),
-    url("fonts/prodjar.ttf?eot2p6") format("truetype"),
-    url("fonts/prodjar.woff?eot2p6") format("woff"),
-    url("fonts/prodjar.svg?eot2p6#prodjar") format("svg");
+  font-family: "pyticon";
+  src: url("https://d3lf10b5gahyby.cloudfront.net/web_app/fonts/pyt/20190821/pyticon.eot?28dej1");
+  src: url("https://d3lf10b5gahyby.cloudfront.net/web_app/fonts/pyt/20190821/pyticon.eot?28dej1#iefix")
+      format("embedded-opentype"),
+    url("https://d3lf10b5gahyby.cloudfront.net/web_app/fonts/pyt/20190821/pyticon.ttf")
+      format("truetype"),
+    url("https://d3lf10b5gahyby.cloudfront.net/web_app/fonts/pyt/20190821/pyticon.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
-[class^="jaricon-"],
-[class*=" jaricon-"] {
+[class^="pyt-"],
+[class*=" pyt-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "prodjar" !important;
+  font-family: "pyticon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -25,18 +28,1506 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.jaricon-linkedin-square:before {
-  content: "\e904";
+.pyt-account-16:before {
+  content: "\eabe";
 }
-.jaricon-twitter-square:before {
+.pyt-activities-16:before {
+  content: "\e916";
+}
+.pyt-air-conditioner-16:before {
+  content: "\ea17";
+}
+.pyt-alert-square-16:before {
   content: "\e903";
 }
-.jaricon-instagram:before {
+.pyt-all-inclusive-16:before {
+  content: "\e92c";
+}
+.pyt-area-16:before {
+  content: "\e939";
+}
+.pyt-arrow-down-16:before {
+  content: "\e96a";
+}
+.pyt-arrow-down-circle-16:before {
+  content: "\e93a";
+}
+.pyt-arrow-fill-down-16:before {
+  content: "\e957";
+}
+.pyt-arrow-fill-left-16:before {
+  content: "\ea94";
+}
+.pyt-arrow-fill-right-16:before {
+  content: "\ea95";
+}
+.pyt-arrow-fill-up-16:before {
+  content: "\e95c";
+}
+.pyt-arrow-left-16:before {
+  content: "\e99a";
+}
+.pyt-arrow-left-circle-16:before {
+  content: "\e969";
+}
+.pyt-arrow-right-16:before {
+  content: "\e9a3";
+}
+.pyt-arrow-right-circle-16:before {
+  content: "\ea96";
+}
+.pyt-arrow-top-16:before {
+  content: "\e964";
+}
+.pyt-arrow-up-circle-16:before {
+  content: "\ea97";
+}
+.pyt-attach-16:before {
+  content: "\eade";
+}
+.pyt-baby-16:before {
+  content: "\ea18";
+}
+.pyt-back-to-itinerary-16:before {
+  content: "\eaef";
+}
+.pyt-back-to-list-16:before {
+  content: "\eaf0";
+}
+.pyt-backspace-16:before {
+  content: "\ea19";
+}
+.pyt-backspace-fill-16:before {
+  content: "\e992";
+}
+.pyt-badge-16:before {
+  content: "\e987";
+}
+.pyt-baggage-16:before {
+  content: "\ea1a";
+}
+.pyt-balcony-door-16:before {
+  content: "\e912";
+}
+.pyt-bar-16:before {
+  content: "\ea1b";
+}
+.pyt-barcode-16:before {
+  content: "\e96e";
+}
+.pyt-basket-ball-court-16:before {
+  content: "\ea1c";
+}
+.pyt-bath-tub-16:before {
+  content: "\ea1d";
+}
+.pyt-beach-front-room-16:before {
+  content: "\e96f";
+}
+.pyt-beach-towel-16:before {
+  content: "\e919";
+}
+.pyt-beach-villa-16:before {
+  content: "\e977";
+}
+.pyt-bed-16:before {
+  content: "\e978";
+}
+.pyt-bell-16:before {
+  content: "\ea1e";
+}
+.pyt-bicycle-16:before {
+  content: "\e979";
+}
+.pyt-binocular-16:before {
+  content: "\ea07";
+}
+.pyt-bookmark-16:before {
+  content: "\ea1f";
+}
+.pyt-bookmark-outline-16:before {
+  content: "\ea20";
+}
+.pyt-boutique-16:before {
+  content: "\ea21";
+}
+.pyt-breakfast-16:before {
+  content: "\e97a";
+}
+.pyt-bullet-train-16:before {
+  content: "\e97b";
+}
+.pyt-bullet-train-fill-16:before {
+  content: "\ea9c";
+}
+.pyt-bus-16:before {
+  content: "\e97c";
+}
+.pyt-bus-fill-16:before {
+  content: "\ea9d";
+}
+.pyt-butler-service-16:before {
+  content: "\ea22";
+}
+.pyt-cached-16:before {
+  content: "\eabf";
+}
+.pyt-calendar-16:before {
+  content: "\e91a";
+}
+.pyt-camera-16:before {
+  content: "\e97d";
+}
+.pyt-car-16:before {
+  content: "\e97e";
+}
+.pyt-ceiling-fan-16:before {
+  content: "\e97f";
+}
+.pyt-check-circle-16:before {
+  content: "\e91c";
+}
+.pyt-check-square-16:before {
+  content: "\e91b";
+}
+.pyt-check_box_active-16:before {
+  content: "\eac0";
+}
+.pyt-check_box_blank-16:before {
+  content: "\eac1";
+}
+.pyt-chevron-down-16:before {
+  content: "\e982";
+}
+.pyt-chevron-down-circle-16:before {
+  content: "\e91d";
+}
+.pyt-chevron-left-16:before {
+  content: "\e984";
+}
+.pyt-chevron-left-circle-16:before {
+  content: "\e985";
+}
+.pyt-chevron-right-16:before {
+  content: "\ea10";
+}
+.pyt-chevron-top-16:before {
+  content: "\ea11";
+}
+.pyt-childcare-16:before {
+  content: "\e986";
+}
+.pyt-climate-heat-16:before {
+  content: "\ea90";
+}
+.pyt-clock-16:before {
+  content: "\e988";
+}
+.pyt-clock-room-16:before {
+  content: "\ea23";
+}
+.pyt-close-16:before {
+  content: "\e91f";
+}
+.pyt-close-circle-16:before {
+  content: "\e989";
+}
+.pyt-compare-16:before {
+  content: "\e920";
+}
+.pyt-compass-16:before {
+  content: "\e921";
+}
+.pyt-contact-16:before {
+  content: "\ea24";
+}
+.pyt-delete-16:before {
   content: "\e902";
 }
-.jaricon-facebook-square:before {
+.pyt-diamond-16:before {
+  content: "\ea26";
+}
+.pyt-disco-16:before {
+  content: "\e98b";
+}
+.pyt-doctor-16:before {
+  content: "\e98c";
+}
+.pyt-download-16:before {
+  content: "\e98d";
+}
+.pyt-dropdown-circle-16:before {
+  content: "\e93e";
+}
+.pyt-dropdown-circle-left-16:before {
+  content: "\e918";
+}
+.pyt-edit-16:before {
+  content: "\e98e";
+}
+.pyt-edit-box-16:before {
+  content: "\e915";
+}
+.pyt-elevator-16:before {
+  content: "\ea27";
+}
+.pyt-email-16:before {
+  content: "\e98f";
+}
+.pyt-eticket-16:before {
+  content: "\e990";
+}
+.pyt-exclamation-16:before {
+  content: "\ea28";
+}
+.pyt-excluded-16:before {
+  content: "\ea08";
+}
+.pyt-facebook-16:before {
+  content: "\e924";
+}
+.pyt-facility-16:before {
+  content: "\e925";
+}
+.pyt-faq-16:before {
+  content: "\ea03";
+}
+.pyt-female-16:before {
+  content: "\ea29";
+}
+.pyt-filter-16:before {
+  content: "\e926";
+}
+.pyt-filters-16:before {
+  content: "\eaf1";
+}
+.pyt-fire-16:before {
+  content: "\eac2";
+}
+.pyt-fire-outline-16:before {
+  content: "\eac3";
+}
+.pyt-flag-16:before {
+  content: "\ea2a";
+}
+.pyt-flag-outline-16:before {
+  content: "\ea2b";
+}
+.pyt-flash-on-16:before {
+  content: "\ea2c";
+}
+.pyt-flash-on-outline-16:before {
+  content: "\ea2d";
+}
+.pyt-flight-16:before {
+  content: "\ea09";
+}
+.pyt-flight-arrival-16:before {
+  content: "\ea25";
+}
+.pyt-flight-arrival-fill-16:before {
+  content: "\ea9e";
+}
+.pyt-flight-departure-16:before {
+  content: "\e930";
+}
+.pyt-flight-departure-fill-16:before {
+  content: "\ea9f";
+}
+.pyt-flight-down-16:before {
+  content: "\eae3";
+}
+.pyt-flight-fill-16:before {
+  content: "\eaa0";
+}
+.pyt-flight-fill-down-16:before {
+  content: "\eae4";
+}
+.pyt-flight-fill-left-16:before {
+  content: "\eae5";
+}
+.pyt-flight-fill-up-16:before {
+  content: "\eae6";
+}
+.pyt-flight-left-16:before {
+  content: "\eae7";
+}
+.pyt-flight-up-16:before {
+  content: "\eae8";
+}
+.pyt-food-personalized-16:before {
+  content: "\eadf";
+}
+.pyt-full-board-16:before {
+  content: "\e991";
+}
+.pyt-fyi-16:before {
+  content: "\eaa1";
+}
+.pyt-gallery-16:before {
+  content: "\e998";
+}
+.pyt-global-16:before {
+  content: "\eac4";
+}
+.pyt-google-16:before {
+  content: "\e929";
+}
+.pyt-great-location-16:before {
+  content: "\e92a";
+}
+.pyt-gym-16:before {
+  content: "\ea2e";
+}
+.pyt-hair-dryer-16:before {
+  content: "\e994";
+}
+.pyt-half-board-16:before {
+  content: "\e995";
+}
+.pyt-half-checked-16:before {
+  content: "\e92b";
+}
+.pyt-half-star-16:before {
+  content: "\e996";
+}
+.pyt-hamburger-menu-16:before {
+  content: "\ea2f";
+}
+.pyt-heart-16:before {
+  content: "\e92d";
+}
+.pyt-heart-fill-16:before {
+  content: "\ea30";
+}
+.pyt-help-16:before {
+  content: "\e997";
+}
+.pyt-home-16:before {
+  content: "\ea31";
+}
+.pyt-home-fill-16:before {
+  content: "\eaa2";
+}
+.pyt-honeymoon-16:before {
+  content: "\e92e";
+}
+.pyt-hotel-16:before {
+  content: "\e92f";
+}
+.pyt-image-16:before {
+  content: "\eaa3";
+}
+.pyt-included-16:before {
+  content: "\ea16";
+}
+.pyt-indoor-games-16:before {
+  content: "\ea32";
+}
+.pyt-info-16:before {
+  content: "\eaa4";
+}
+.pyt-instagram-16:before {
+  content: "\eae0";
+}
+.pyt-insurance-16:before {
+  content: "\e931";
+}
+.pyt-kidsclub-16:before {
+  content: "\ea33";
+}
+.pyt-kitchen-fridge-16:before {
+  content: "\ea34";
+}
+.pyt-late-evening-16:before {
+  content: "\eac5";
+}
+.pyt-laundry-16:before {
+  content: "\e999";
+}
+.pyt-length-sqaure-16:before {
+  content: "\ea35";
+}
+.pyt-link-16:before {
+  content: "\ea36";
+}
+.pyt-linkedin-16:before {
+  content: "\e932";
+}
+.pyt-list-16:before {
+  content: "\ea37";
+}
+.pyt-location-16:before {
+  content: "\e933";
+}
+.pyt-locker-facility-16:before {
+  content: "\ea38";
+}
+.pyt-luggage-16:before {
+  content: "\e99b";
+}
+.pyt-male-16:before {
+  content: "\ea39";
+}
+.pyt-map-16:before {
+  content: "\e99c";
+}
+.pyt-meals-plan-16:before {
+  content: "\e98a";
+}
+.pyt-mic-16:before {
+  content: "\e993";
+}
+.pyt-microwave-16:before {
+  content: "\ea3a";
+}
+.pyt-minus-16:before {
+  content: "\e900";
+}
+.pyt-minus-circle-16:before {
+  content: "\e904";
+}
+.pyt-mobile-16:before {
+  content: "\e99d";
+}
+.pyt-moon-16:before {
+  content: "\eac6";
+}
+.pyt-more-horizontal-16:before {
+  content: "\e935";
+}
+.pyt-more-vertical-16:before {
+  content: "\e936";
+}
+.pyt-navigation-16:before {
+  content: "\e99e";
+}
+.pyt-navigation-fill-16:before {
+  content: "\e99f";
+}
+.pyt-non-refundable-16:before {
+  content: "\e937";
+}
+.pyt-panorama-16:before {
+  content: "\ea3b";
+}
+.pyt-parking-16:before {
+  content: "\ea91";
+}
+.pyt-pause-circle-16:before {
+  content: "\ea3c";
+}
+.pyt-people-16:before {
+  content: "\e938";
+}
+.pyt-pet-paw-16:before {
+  content: "\ea3d";
+}
+.pyt-phone-16:before {
+  content: "\e922";
+}
+.pyt-pickup-16:before {
+  content: "\e9a0";
+}
+.pyt-plus-16:before {
   content: "\e901";
 }
-.jaricon-envelope:before {
-  content: "\e900";
+.pyt-plus-circle-16:before {
+  content: "\e905";
+}
+.pyt-pool-16:before {
+  content: "\e9a1";
+}
+.pyt-private-activity-16:before {
+  content: "\e9a2";
+}
+.pyt-private-beach-16:before {
+  content: "\ea0d";
+}
+.pyt-radiobtn-checked-16:before {
+  content: "\e927";
+}
+.pyt-radiobtn-unchecked-16:before {
+  content: "\e93b";
+}
+.pyt-recent-16:before {
+  content: "\eaa5";
+}
+.pyt-recepit-16:before {
+  content: "\ea3e";
+}
+.pyt-refundable-16:before {
+  content: "\e93c";
+}
+.pyt-restaurant-16:before {
+  content: "\e928";
+}
+.pyt-restaurant-hat-16:before {
+  content: "\ea3f";
+}
+.pyt-room-service-16:before {
+  content: "\ea40";
+}
+.pyt-room-tag-16:before {
+  content: "\eac7";
+}
+.pyt-sad-16:before {
+  content: "\eac8";
+}
+.pyt-saving-money-16:before {
+  content: "\ea41";
+}
+.pyt-scuba-diving-16:before {
+  content: "\e9a4";
+}
+.pyt-sea-plane-16:before {
+  content: "\e9a5";
+}
+.pyt-sea-viewroom-16:before {
+  content: "\e9a6";
+}
+.pyt-search-16:before {
+  content: "\e93d";
+}
+.pyt-seat-16:before {
+  content: "\e914";
+}
+.pyt-serif-info-16:before {
+  content: "\eaa6";
+}
+.pyt-service-16:before {
+  content: "\e9a7";
+}
+.pyt-setting-16:before {
+  content: "\ea42";
+}
+.pyt-share-16:before {
+  content: "\ea12";
+}
+.pyt-shared-activity-16:before {
+  content: "\e9a8";
+}
+.pyt-ship-16:before {
+  content: "\e9a9";
+}
+.pyt-ship-fill-16:before {
+  content: "\eaa7";
+}
+.pyt-shower-16:before {
+  content: "\ea43";
+}
+.pyt-shuffle-16:before {
+  content: "\ea44";
+}
+.pyt-slippers-16:before {
+  content: "\e9aa";
+}
+.pyt-small-group-16:before {
+  content: "\e9ab";
+}
+.pyt-smile-16:before {
+  content: "\eac9";
+}
+.pyt-sort-ascending-16:before {
+  content: "\eaa8";
+}
+.pyt-sort-descending-16:before {
+  content: "\eaa9";
+}
+.pyt-spa-16:before {
+  content: "\ea45";
+}
+.pyt-speed-boat-16:before {
+  content: "\e9ac";
+}
+.pyt-speed-boat-fill-16:before {
+  content: "\eaaa";
+}
+.pyt-split-stay-16:before {
+  content: "\e9ad";
+}
+.pyt-star-16:before {
+  content: "\e9ae";
+}
+.pyt-star-outline-16:before {
+  content: "\e9af";
+}
+.pyt-stopwatch-16:before {
+  content: "\ea46";
+}
+.pyt-suitcase-16:before {
+  content: "\ea47";
+}
+.pyt-sunrise-16:before {
+  content: "\eaca";
+}
+.pyt-sunset-16:before {
+  content: "\eacb";
+}
+.pyt-support-16:before {
+  content: "\ea0a";
+}
+.pyt-switch-16:before {
+  content: "\ea48";
+}
+.pyt-tea-maker-16:before {
+  content: "\e9b0";
+}
+.pyt-telephone-16:before {
+  content: "\e9b1";
+}
+.pyt-television-16:before {
+  content: "\e9b2";
+}
+.pyt-tennis-court-16:before {
+  content: "\ea49";
+}
+.pyt-thumb-down-16:before {
+  content: "\ea4a";
+}
+.pyt-thumb-up-16:before {
+  content: "\ea4b";
+}
+.pyt-thumbnails-16:before {
+  content: "\e9b3";
+}
+.pyt-ticket-16:before {
+  content: "\e940";
+}
+.pyt-tickmark-16:before {
+  content: "\e910";
+}
+.pyt-tickmark-circle-16:before {
+  content: "\e907";
+}
+.pyt-tools-16:before {
+  content: "\ea4c";
+}
+.pyt-train-16:before {
+  content: "\e906";
+}
+.pyt-train-fill-16:before {
+  content: "\eaab";
+}
+.pyt-transfer-16:before {
+  content: "\e941";
+}
+.pyt-transmission-16:before {
+  content: "\e942";
+}
+.pyt-trip-advisor-16:before {
+  content: "\ea4d";
+}
+.pyt-twitter-16:before {
+  content: "\e943";
+}
+.pyt-upload-16:before {
+  content: "\e9b4";
+}
+.pyt-van-16:before {
+  content: "\e9b5";
+}
+.pyt-van-fill-16:before {
+  content: "\eaac";
+}
+.pyt-veho-16:before {
+  content: "\e9b6";
+}
+.pyt-veho-outline-16:before {
+  content: "\e9b7";
+}
+.pyt-visa-16:before {
+  content: "\e944";
+}
+.pyt-visibility-16:before {
+  content: "\eae1";
+}
+.pyt-wallet-16:before {
+  content: "\ea4e";
+}
+.pyt-warm-water-16:before {
+  content: "\e9b8";
+}
+.pyt-warning-16:before {
+  content: "\e9b9";
+}
+.pyt-watch-16:before {
+  content: "\e945";
+}
+.pyt-water-sport-16:before {
+  content: "\e9ba";
+}
+.pyt-water-villa-16:before {
+  content: "\e9bb";
+}
+.pyt-whatsapp-16:before {
+  content: "\e946";
+}
+.pyt-whatsapp-fill-16:before {
+  content: "\ea04";
+}
+.pyt-wheelchair-16:before {
+  content: "\ea4f";
+}
+.pyt-wifi-16:before {
+  content: "\e9bc";
+}
+.pyt-zoom-in-16:before {
+  content: "\ea50";
+}
+.pyt-zoom-out-16:before {
+  content: "\ea51";
+}
+.pyt-account-24:before {
+  content: "\eacc";
+}
+.pyt-activities-24:before {
+  content: "\e947";
+}
+.pyt-air-conditioner-24:before {
+  content: "\ea53";
+}
+.pyt-alert-square-24:before {
+  content: "\e917";
+}
+.pyt-all-inclusive-24:before {
+  content: "\e91e";
+}
+.pyt-area-24:before {
+  content: "\e93f";
+}
+.pyt-arrow-down-24:before {
+  content: "\e948";
+}
+.pyt-arrow-down-circle-24:before {
+  content: "\e9d2";
+}
+.pyt-arrow-fill-down-24:before {
+  content: "\e980";
+}
+.pyt-arrow-fill-left-24:before {
+  content: "\ea98";
+}
+.pyt-arrow-fill-right-24:before {
+  content: "\ea99";
+}
+.pyt-arrow-fill-up-24:before {
+  content: "\e981";
+}
+.pyt-arrow-left-24:before {
+  content: "\e9bd";
+}
+.pyt-arrow-left-circle-24:before {
+  content: "\e9d3";
+}
+.pyt-arrow-right-24:before {
+  content: "\e9be";
+}
+.pyt-arrow-right-circle-24:before {
+  content: "\ea9a";
+}
+.pyt-arrow-top-24:before {
+  content: "\e9bf";
+}
+.pyt-arrow-up-circle-24:before {
+  content: "\ea9b";
+}
+.pyt-attach-24:before {
+  content: "\eada";
+}
+.pyt-baby-24:before {
+  content: "\ea54";
+}
+.pyt-back-to-itinerary-24:before {
+  content: "\eaf2";
+}
+.pyt-back-to-list-24:before {
+  content: "\eaf3";
+}
+.pyt-backspace-24:before {
+  content: "\ea55";
+}
+.pyt-backspace-fill-24:before {
+  content: "\eaad";
+}
+.pyt-badge-24:before {
+  content: "\e9c0";
+}
+.pyt-baggage-24:before {
+  content: "\ea56";
+}
+.pyt-balcony-door-24:before {
+  content: "\e923";
+}
+.pyt-bar-24:before {
+  content: "\ea57";
+}
+.pyt-barcode-24:before {
+  content: "\e9c1";
+}
+.pyt-basket-ball-court-24:before {
+  content: "\ea58";
+}
+.pyt-bath-tub-24:before {
+  content: "\ea59";
+}
+.pyt-beach-front-room-24:before {
+  content: "\e9c2";
+}
+.pyt-beach-towel-24:before {
+  content: "\e94a";
+}
+.pyt-beach-villa-24:before {
+  content: "\e9c3";
+}
+.pyt-bed-24:before {
+  content: "\e9c5";
+}
+.pyt-bell-24:before {
+  content: "\ea5a";
+}
+.pyt-bicycle-24:before {
+  content: "\e9c6";
+}
+.pyt-binocular-24:before {
+  content: "\ea0b";
+}
+.pyt-bookmark-24:before {
+  content: "\ea5b";
+}
+.pyt-bookmark-outline-24:before {
+  content: "\ea5c";
+}
+.pyt-boutique-24:before {
+  content: "\ea5d";
+}
+.pyt-breakfast-24:before {
+  content: "\e9c7";
+}
+.pyt-bullet-train-24:before {
+  content: "\e9c8";
+}
+.pyt-bullet-train-fill-24:before {
+  content: "\eaae";
+}
+.pyt-bus-24:before {
+  content: "\e9c9";
+}
+.pyt-bus-fill-24:before {
+  content: "\eaaf";
+}
+.pyt-butler-service-24:before {
+  content: "\ea5e";
+}
+.pyt-cached-24:before {
+  content: "\eacd";
+}
+.pyt-calendar-24:before {
+  content: "\e94b";
+}
+.pyt-camera-24:before {
+  content: "\e9ca";
+}
+.pyt-car-24:before {
+  content: "\e9cb";
+}
+.pyt-ceiling-fan-24:before {
+  content: "\e9cc";
+}
+.pyt-check-circle-24:before {
+  content: "\e94d";
+}
+.pyt-check-square-24:before {
+  content: "\e94c";
+}
+.pyt-check_box_active-24:before {
+  content: "\eace";
+}
+.pyt-check_box_blank-24:before {
+  content: "\eacf";
+}
+.pyt-chevron-down-24:before {
+  content: "\e94f";
+}
+.pyt-chevron-down-circle-24:before {
+  content: "\e94e";
+}
+.pyt-chevron-left-24:before {
+  content: "\e983";
+}
+.pyt-chevron-left-circle-24:before {
+  content: "\e949";
+}
+.pyt-chevron-right-24:before {
+  content: "\ea13";
+}
+.pyt-chevron-top-24:before {
+  content: "\ea14";
+}
+.pyt-childcare-24:before {
+  content: "\e9cd";
+}
+.pyt-climate-heat-24:before {
+  content: "\ea92";
+}
+.pyt-clock-24:before {
+  content: "\e9ce";
+}
+.pyt-clock-room-24:before {
+  content: "\ea5f";
+}
+.pyt-close-circle-24:before {
+  content: "\e9cf";
+}
+.pyt-compare-24:before {
+  content: "\e950";
+}
+.pyt-compass-24:before {
+  content: "\e951";
+}
+.pyt-contact-24:before {
+  content: "\ea60";
+}
+.pyt-delete-24:before {
+  content: "\e909";
+}
+.pyt-diamond-24:before {
+  content: "\ea62";
+}
+.pyt-disco-24:before {
+  content: "\e9d0";
+}
+.pyt-doctor-24:before {
+  content: "\e9d1";
+}
+.pyt-download-24:before {
+  content: "\e9d4";
+}
+.pyt-dropdown-circle-24:before {
+  content: "\e9d5";
+}
+.pyt-dropdown-circle-left-24:before {
+  content: "\e9d6";
+}
+.pyt-edit-24:before {
+  content: "\e90a";
+}
+.pyt-edit-box-24:before {
+  content: "\e913";
+}
+.pyt-elevator-24:before {
+  content: "\ea63";
+}
+.pyt-email-24:before {
+  content: "\e9d7";
+}
+.pyt-eticket-24:before {
+  content: "\e9d8";
+}
+.pyt-exclamation-24:before {
+  content: "\ea64";
+}
+.pyt-excluded-24:before {
+  content: "\ea0c";
+}
+.pyt-facebook-24:before {
+  content: "\e954";
+}
+.pyt-facility-24:before {
+  content: "\e955";
+}
+.pyt-faq-24:before {
+  content: "\ea05";
+}
+.pyt-female-24:before {
+  content: "\ea65";
+}
+.pyt-filter-24:before {
+  content: "\e956";
+}
+.pyt-filters-24:before {
+  content: "\eaf4";
+}
+.pyt-fire-24:before {
+  content: "\ead0";
+}
+.pyt-fire-outline-24:before {
+  content: "\ead1";
+}
+.pyt-flag-24:before {
+  content: "\ea66";
+}
+.pyt-flag-outline-24:before {
+  content: "\ea67";
+}
+.pyt-flash-on-24:before {
+  content: "\ea68";
+}
+.pyt-flash-on-outline-24:before {
+  content: "\ea69";
+}
+.pyt-flight-24:before {
+  content: "\ea8e";
+}
+.pyt-flight-arrival-24:before {
+  content: "\ea61";
+}
+.pyt-flight-arrival-fill-24:before {
+  content: "\eab0";
+}
+.pyt-flight-departure-24:before {
+  content: "\e960";
+}
+.pyt-flight-departure-fill-24:before {
+  content: "\eab1";
+}
+.pyt-flight-down-24:before {
+  content: "\eae9";
+}
+.pyt-flight-fill-24:before {
+  content: "\eab2";
+}
+.pyt-flight-fill-down-24:before {
+  content: "\eaea";
+}
+.pyt-flight-fill-left-24:before {
+  content: "\eaeb";
+}
+.pyt-flight-fill-up-24:before {
+  content: "\eaec";
+}
+.pyt-flight-left-24:before {
+  content: "\eaed";
+}
+.pyt-flight-up-24:before {
+  content: "\eaee";
+}
+.pyt-food-personalized-24:before {
+  content: "\eadb";
+}
+.pyt-full-board-24:before {
+  content: "\e9d9";
+}
+.pyt-fyi-24:before {
+  content: "\eab3";
+}
+.pyt-gallery-24:before {
+  content: "\e9da";
+}
+.pyt-global-24:before {
+  content: "\ead2";
+}
+.pyt-google-24:before {
+  content: "\e959";
+}
+.pyt-great-location-24:before {
+  content: "\e95a";
+}
+.pyt-gym-24:before {
+  content: "\ea6a";
+}
+.pyt-hair-dryer-24:before {
+  content: "\e9db";
+}
+.pyt-half-board-24:before {
+  content: "\e9dc";
+}
+.pyt-half-checked-24:before {
+  content: "\e95b";
+}
+.pyt-half-star-24:before {
+  content: "\e9dd";
+}
+.pyt-hamburger-menu-24:before {
+  content: "\ea6b";
+}
+.pyt-heart-24:before {
+  content: "\e95d";
+}
+.pyt-heart-fill-24:before {
+  content: "\ea6c";
+}
+.pyt-help-24:before {
+  content: "\e9de";
+}
+.pyt-home-24:before {
+  content: "\ea6d";
+}
+.pyt-home-fill-24:before {
+  content: "\eab4";
+}
+.pyt-honeymoon-24:before {
+  content: "\e95e";
+}
+.pyt-hotel-24:before {
+  content: "\e95f";
+}
+.pyt-image-24:before {
+  content: "\e9df";
+}
+.pyt-included-24:before {
+  content: "\ea52";
+}
+.pyt-indoor-games-24:before {
+  content: "\ea6e";
+}
+.pyt-info-24:before {
+  content: "\eab5";
+}
+.pyt-instagram-24:before {
+  content: "\eadc";
+}
+.pyt-insurance-24:before {
+  content: "\e961";
+}
+.pyt-kidsclub-24:before {
+  content: "\ea6f";
+}
+.pyt-kitchen-fridge-24:before {
+  content: "\ea70";
+}
+.pyt-late-evening-24:before {
+  content: "\ead3";
+}
+.pyt-laundry-24:before {
+  content: "\e9e0";
+}
+.pyt-length-sqaure-24:before {
+  content: "\ea71";
+}
+.pyt-link-24:before {
+  content: "\ea72";
+}
+.pyt-linkedin-24:before {
+  content: "\e962";
+}
+.pyt-list-24:before {
+  content: "\ea73";
+}
+.pyt-location-24:before {
+  content: "\e963";
+}
+.pyt-locker-facility-24:before {
+  content: "\ea74";
+}
+.pyt-luggage-24:before {
+  content: "\e9e1";
+}
+.pyt-male-24:before {
+  content: "\ea75";
+}
+.pyt-map-24:before {
+  content: "\e9e2";
+}
+.pyt-meals-plan-24:before {
+  content: "\e9e3";
+}
+.pyt-mic-24:before {
+  content: "\e9e4";
+}
+.pyt-microwave-24:before {
+  content: "\ea76";
+}
+.pyt-minus-24:before {
+  content: "\e908";
+}
+.pyt-minus-circle-24:before {
+  content: "\e90b";
+}
+.pyt-mobile-24:before {
+  content: "\e9e5";
+}
+.pyt-moon-24:before {
+  content: "\ead4";
+}
+.pyt-more-horizontal-24:before {
+  content: "\e965";
+}
+.pyt-more-vertical-24:before {
+  content: "\e966";
+}
+.pyt-navigation-24:before {
+  content: "\e9e6";
+}
+.pyt-navigation-fill-24:before {
+  content: "\e9e7";
+}
+.pyt-non-refundable-24:before {
+  content: "\e967";
+}
+.pyt-panorama-24:before {
+  content: "\ea77";
+}
+.pyt-parking-24:before {
+  content: "\ea93";
+}
+.pyt-pause-24:before {
+  content: "\ea78";
+}
+.pyt-people-24:before {
+  content: "\e968";
+}
+.pyt-pet-paw-24:before {
+  content: "\ea79";
+}
+.pyt-phone-24:before {
+  content: "\e952";
+}
+.pyt-pickup-24:before {
+  content: "\e9e8";
+}
+.pyt-plus-24:before {
+  content: "\e90e";
+}
+.pyt-plus-circle-24:before {
+  content: "\e90c";
+}
+.pyt-pool-24:before {
+  content: "\e9e9";
+}
+.pyt-private-activity-24:before {
+  content: "\e9ea";
+}
+.pyt-private-beach-24:before {
+  content: "\ea8f";
+}
+.pyt-radiobtn-checked-24:before {
+  content: "\e934";
+}
+.pyt-radiobtn-unchecked-24:before {
+  content: "\e96b";
+}
+.pyt-recent-24:before {
+  content: "\eab6";
+}
+.pyt-recepit-24:before {
+  content: "\ea7a";
+}
+.pyt-refundable-24:before {
+  content: "\e96c";
+}
+.pyt-restaurant-24:before {
+  content: "\e958";
+}
+.pyt-restaurant-hat-24:before {
+  content: "\ea7b";
+}
+.pyt-room-service-24:before {
+  content: "\ea7c";
+}
+.pyt-room-tag-24:before {
+  content: "\ead5";
+}
+.pyt-sad-24:before {
+  content: "\ead6";
+}
+.pyt-saving-money-24:before {
+  content: "\ea7d";
+}
+.pyt-scuba-diving-24:before {
+  content: "\e9eb";
+}
+.pyt-sea-plane-24:before {
+  content: "\e9ec";
+}
+.pyt-sea-viewroom-24:before {
+  content: "\e9ed";
+}
+.pyt-search-24:before {
+  content: "\e96d";
+}
+.pyt-seat-24:before {
+  content: "\e953";
+}
+.pyt-serif-info-24:before {
+  content: "\eab7";
+}
+.pyt-service-24:before {
+  content: "\e9ee";
+}
+.pyt-setting-24:before {
+  content: "\ea7e";
+}
+.pyt-share-24:before {
+  content: "\ea15";
+}
+.pyt-shared-activity-24:before {
+  content: "\e9ef";
+}
+.pyt-ship-24:before {
+  content: "\e9f0";
+}
+.pyt-ship-fill-24:before {
+  content: "\eab8";
+}
+.pyt-shower-24:before {
+  content: "\ea7f";
+}
+.pyt-shuffle-24:before {
+  content: "\ea80";
+}
+.pyt-slippers-24:before {
+  content: "\e9f1";
+}
+.pyt-small-group-24:before {
+  content: "\e9f2";
+}
+.pyt-smile-24:before {
+  content: "\ead7";
+}
+.pyt-sort-ascending-24:before {
+  content: "\eab9";
+}
+.pyt-sort-descending-24:before {
+  content: "\eaba";
+}
+.pyt-spa-24:before {
+  content: "\ea81";
+}
+.pyt-speed-boat-24:before {
+  content: "\e9f3";
+}
+.pyt-speed-boat-fill-24:before {
+  content: "\eabb";
+}
+.pyt-split-stay-24:before {
+  content: "\e9f4";
+}
+.pyt-star-24:before {
+  content: "\e9f5";
+}
+.pyt-star-outline-24:before {
+  content: "\e9f6";
+}
+.pyt-stopwatch-24:before {
+  content: "\ea82";
+}
+.pyt-suitcase-24:before {
+  content: "\ea83";
+}
+.pyt-sunrise-24:before {
+  content: "\ead8";
+}
+.pyt-sunset-24:before {
+  content: "\ead9";
+}
+.pyt-support-24:before {
+  content: "\ea0e";
+}
+.pyt-switch-24:before {
+  content: "\ea84";
+}
+.pyt-tea-maker-24:before {
+  content: "\e9f7";
+}
+.pyt-telephone-24:before {
+  content: "\e9f8";
+}
+.pyt-television-24:before {
+  content: "\e9f9";
+}
+.pyt-tennis-court-24:before {
+  content: "\ea85";
+}
+.pyt-thumb-down-24:before {
+  content: "\ea86";
+}
+.pyt-thumb-up-24:before {
+  content: "\ea87";
+}
+.pyt-thumbnails-24:before {
+  content: "\e9fa";
+}
+.pyt-ticket-24:before {
+  content: "\e970";
+}
+.pyt-tickmark-24:before {
+  content: "\e911";
+}
+.pyt-tickmark-circle-24:before {
+  content: "\e90f";
+}
+.pyt-tools-24:before {
+  content: "\ea88";
+}
+.pyt-train-24:before {
+  content: "\e90d";
+}
+.pyt-train-fill-24:before {
+  content: "\eabc";
+}
+.pyt-transfer-24:before {
+  content: "\e971";
+}
+.pyt-transmission-24:before {
+  content: "\e972";
+}
+.pyt-trip-advisor-24:before {
+  content: "\ea89";
+}
+.pyt-twitter-24:before {
+  content: "\e973";
+}
+.pyt-upload-24:before {
+  content: "\e9fb";
+}
+.pyt-van-24:before {
+  content: "\e9fc";
+}
+.pyt-van-fill-24:before {
+  content: "\eabd";
+}
+.pyt-veho-24:before {
+  content: "\e9fd";
+}
+.pyt-veho-outline-24:before {
+  content: "\e9fe";
+}
+.pyt-visa-24:before {
+  content: "\e974";
+}
+.pyt-visibility-24:before {
+  content: "\eadd";
+}
+.pyt-wallet-24:before {
+  content: "\ea8a";
+}
+.pyt-warm-water-24:before {
+  content: "\e9ff";
+}
+.pyt-warning-24:before {
+  content: "\ea00";
+}
+.pyt-watch-24:before {
+  content: "\e975";
+}
+.pyt-water-sport-24:before {
+  content: "\ea01";
+}
+.pyt-water-villa-24:before {
+  content: "\e9c4";
+}
+.pyt-whatsapp-24:before {
+  content: "\e976";
+}
+.pyt-whatsapp-fill-24:before {
+  content: "\ea06";
+}
+.pyt-wheelchair-24:before {
+  content: "\ea8b";
+}
+.pyt-wifi-24:before {
+  content: "\ea02";
+}
+.pyt-zoom-in-24:before {
+  content: "\ea8c";
+}
+.pyt-zoom-out-24:before {
+  content: "\ea8d";
+}
+.pyt-happy-sign-32:before {
+  content: "\eae2";
+}
+.pyt-fyi-36:before {
+  content: "\ea0f";
 }
