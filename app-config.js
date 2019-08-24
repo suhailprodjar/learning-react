@@ -10,5 +10,8 @@ switch (NODE_ENV) {
 }
 
 export const AppConfig = {
-  api_url: API_URL
+  api_url: API_URL,
+  product: 'Learning Grow',
+  shortDesc: '',
+  socket_url: ''
 };

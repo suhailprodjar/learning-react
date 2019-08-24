@@ -21,7 +21,7 @@ export default (req, store, context) => {
                 ${helmet.title.toString()}
                 ${helmet.meta.toString()}
                 ${helmet.link.toString()}
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+                <link rel="stylesheet" href="./index.css" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             </head>
             <body>
