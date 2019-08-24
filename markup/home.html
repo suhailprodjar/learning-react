@@ -15,21 +15,27 @@
   <body>
     <div class="content-wrap">
       <div class="home">
-        <div class="hero-banner">
-          <div class="banner-header">
-            <div class="container">
-              <div class="row vertical-center">
-                <div class="col-12 col-sm-7">
-                  <a href="" class="logo">LearnGrow</a>
-                </div>
-                <div class="col-12 col-sm-5 is_mobile">
-                  <button class="btn active">Student Register</button>
-                  <button class="btn">Trainer Register</button>
-                </div>
+        <!-- header starts -->
+        <header>
+          <div class="container">
+            <div class="row vertical-center">
+              <div class="col-12 col-sm-7">
+                <a href="" class="logo">LearnGrow</a>
+              </div>
+              <div class="col-12 col-sm-5 is_mobile">
+                <button class="btn active" id="student-register">
+                  Student Register
+                </button>
+                <button class="btn" id="trainer-register">
+                  Trainer Register
+                </button>
               </div>
             </div>
           </div>
+        </header>
+        <!-- header ends -->
 
+        <div class="hero-banner">
           <div class="banner-content">
             <div class="container">
               <div class="row vertical-center">
@@ -123,9 +129,10 @@
                 devlopment and marketing, content writing etc.
               </p>
 
-              <div class="row">
-                <div class="col-12 col-sm-4">
-                  <div class="card-wrap">
+              <div class="cardwrap-slider">
+                <div>
+                  <div class="card-wrap active">
+                    <i class="pyt-badge-24"></i>
                     <p>
                       <span>Enterprise Software Development</span>
                       Create complex enterprise software, ensure reliable
@@ -134,48 +141,9 @@
                     <a href="#">Explore More</a>
                   </div>
                 </div>
-                <div class="col-12 col-sm-4">
+                <div>
                   <div class="card-wrap">
-                    <p>
-                      <span>Enterprise Software Development</span>
-                      Create complex enterprise software, ensure reliable
-                      software integration, modernise your legacy system.
-                    </p>
-                    <a href="#">Explore More</a>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="card-wrap">
-                    <p>
-                      <span>Enterprise Software Development</span>
-                      Create complex enterprise software, ensure reliable
-                      software integration, modernise your legacy system.
-                    </p>
-                    <a href="#">Explore More</a>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="card-wrap">
-                    <p>
-                      <span>Enterprise Software Development</span>
-                      Create complex enterprise software, ensure reliable
-                      software integration, modernise your legacy system.
-                    </p>
-                    <a href="#">Explore More</a>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="card-wrap">
-                    <p>
-                      <span>Enterprise Software Development</span>
-                      Create complex enterprise software, ensure reliable
-                      software integration, modernise your legacy system.
-                    </p>
-                    <a href="#">Explore More</a>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-4">
-                  <div class="card-wrap">
+                    <i class="pyt-badge-24"></i>
                     <p>
                       <span>Enterprise Software Development</span>
                       Create complex enterprise software, ensure reliable
@@ -253,8 +221,8 @@
                   elements that make your business and brand successful.
                 </p>
 
-                <div class="row">
-                  <div class="col-sm-6">
+                <div class="testimonial-card-slider">
+                  <div>
                     <div class="testimonial-card">
                       <div class="info">
                         <img
@@ -275,7 +243,28 @@
                       </p>
                     </div>
                   </div>
-                  <div class="col-sm-6">
+                  <div>
+                    <div class="testimonial-card">
+                      <div class="info">
+                        <img
+                          src="https://ca.slack-edge.com/T02B68RPW-U6XSHU79T-d9fe20ffac65-72"
+                          alt=""
+                        />
+
+                        <p>
+                          <span>Suhail mohamed</span>
+                          Lorem ipsum Lorem ipsum
+                        </p>
+                      </div>
+                      <p class="txt">
+                        Social proof is a psychological phenomenon where people
+                        conform to the actions of others under the assumption
+                        that those actions are reflective of the correct
+                        behavior.
+                      </p>
+                    </div>
+                  </div>
+                  <div>
                     <div class="testimonial-card">
                       <div class="info">
                         <img
@@ -303,6 +292,78 @@
         </div>
         <!-- testimonial ends -->
       </div>
+
+      <!-- Register modal -->
+      <div class="register-modal flex-modal">
+        <div class="rg-modal-content">
+          <div class="rg-modal-header">
+            <i class="pyt-arrow-left-16"></i>
+            <span class="close-rg-modal">Close</span>
+          </div>
+          <div class="rg-modal-body">
+            <div class="modal-img-outer">
+              <span class="modal-img"></span>
+            </div>
+            <div class="rg-modal-form">
+              <p class="heading-txt">Sign up as a tutor</p>
+
+              <form>
+                <div class="form-group">
+                  <input type="text" placeholder="Institute Name" name="" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Enter your Full name Eg: Sasikumar"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    placeholder="Enter your Full name Eg: Sasikumar"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    placeholder="Enter your mobile number"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    placeholder="Enter your main category you teach more could be added later"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="number" placeholder="Location" name="" />
+                </div>
+                <div class="text-right">
+                  <button class="btn">Create Profile</button>
+                </div>
+              </form>
+              <div class="ftr-text">
+                <p>Or</p>
+                <p class="txt">
+                  <a href=""
+                    ><i class="pyt-facebook-16"></i> Signup with facebook</a
+                  >
+                </p>
+                <p>
+                  By Signing up, you agree to our
+                  <a href="">Terms of Use</a> &amp;
+                  <a href="">Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-overlay"></div>
     </div>
 
     <!-- footer starts  -->
@@ -361,6 +422,7 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://kenwheeler.github.io/slick/slick/slick.min.js"></script>
 
   <script>
     $("document").ready(function() {
@@ -380,6 +442,34 @@
           $(".is_mobile").removeClass("text-center");
         }
       }
+
+      $("#trainer-register").click(function() {
+        $("body").addClass("show-modal");
+      });
+
+      $(".bg-overlay, .close-rg-modal").click(function(e) {
+        $("body").removeClass("show-modal");
+      });
+
+      // SLIDER
+      $(".cardwrap-slider").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              infinite: false,
+              centerMode: true,
+              centerPadding: "12%",
+              dots: true,
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+      $(".cardwrap-slider").slick("slickNext");
     });
 
     // HEADER STICKY

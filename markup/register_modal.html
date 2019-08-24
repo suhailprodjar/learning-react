@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register modal</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body class="show-modal">
+    <div class="content-wrap">
+      <!-- Register modal -->
+      <div class="register-modal flex-modal">
+        <div class="rg-modal-content">
+          <div class="rg-modal-header">
+            <i class="pyt-arrow-left-16"></i>
+            <span class="close-rg-modal">Close</span>
+          </div>
+          <div class="rg-modal-body">
+            <div class="modal-img-outer">
+              <span class="modal-img"></span>
+            </div>
+            <div class="rg-modal-form">
+              <p class="heading-txt">Sign up as a tutor</p>
+
+              <form>
+                <div class="form-group">
+                  <input type="text" placeholder="Institute Name" name="" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Enter your Full name Eg: Sasikumar"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    placeholder="Enter your Full name Eg: Sasikumar"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    placeholder="Enter your mobile number"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    placeholder="Enter your main category you teach more could be added later"
+                    name=""
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="number" placeholder="Location" name="" />
+                </div>
+                <div class="text-right">
+                  <button class="btn">Create Profile</button>
+                </div>
+              </form>
+              <div class="ftr-text">
+                <p>Or</p>
+                <p class="txt">
+                  <a href=""
+                    ><i class="pyt-facebook-16"></i> Signup with facebook</a
+                  >
+                </p>
+                <p>
+                  By Signing up, you agree to our
+                  <a href="">Terms of Use</a> &amp;
+                  <a href="">Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-overlay"></div>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    $("document").ready(function() {
+      $(".close-rg-modal").click(function() {
+        $("body").removeClass("show-modal");
+      });
+    });
+  </script>
+</html>
