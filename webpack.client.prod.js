@@ -34,7 +34,7 @@ const config = {
     ]
   },
   // Tell webpack to root file of our server app
-  entry: "./src/client/client.js",
+  entry: "./src/client/index.js",
 
   // Tell webpack where to put output file
   output: {
