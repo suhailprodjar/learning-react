@@ -8,9 +8,10 @@
  */
 
 export default function _isEmpty(collection) {
-    if (collection) {
-        return collection.constructor === Object
-            ? !Object.keys(collection).length > 0 : !collection.length > 0
-    }
-    return true;
+  if (collection) {
+    return collection.constructor === Object
+      ? !Object.keys(collection).length > 0
+      : !collection.length > 0;
+  }
+  return true;
 }

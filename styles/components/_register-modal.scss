@@ -133,11 +133,15 @@
         }
 
         p {
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 22px;
+          margin-bottom: 16px;
+
           &.heading-txt {
             font-size: 20px;
             line-height: 30px;
             font-weight: 700;
-            margin-bottom: 16px;
 
             @media ($md) {
               font-size: 24px;
@@ -150,6 +154,13 @@
           margin-bottom: 8px;
           @media ($md) {
             margin-bottom: 14px;
+          }
+
+          label {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 22px;
+            color: #767676;
           }
 
           input {
@@ -170,6 +181,37 @@
 
             &::placeholder {
               color: rgba(32, 25, 40, 0.5);
+            }
+          }
+
+          &.mbl-no {
+            position: relative;
+
+            input {
+              padding-left: 42px;
+
+              @media ($md) {
+                padding-left: 48px;
+              }
+            }
+
+            span {
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding: 8px 10px;
+              border-right: 1px solid rgba(0, 0, 0, 0.2);
+              font-size: 10px;
+              line-height: 15px;
+              color: #201928;
+              height: 32px;
+
+              @media ($md) {
+                height: 40px;
+                font-size: 12px;
+                line-height: 22px;
+                padding: 8px 12px;
+              }
             }
           }
         }
