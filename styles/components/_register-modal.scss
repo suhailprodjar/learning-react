@@ -1,0 +1,220 @@
+.register-modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  position: fixed;
+  top: -100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 13;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  &.flex-modal {
+    .rg-modal-content {
+      .rg-modal-body {
+        @media ($sm) {
+          display: flex;
+        }
+
+        .modal-img-outer .modal-img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &.img-right {
+    .rg-modal-content {
+      .rg-modal-body {
+        .modal-img-outer {
+          @media ($sm) {
+            float: right;
+            padding-left: 8px;
+          }
+          .modal-img {
+            @media ($sm) {
+              height: 400px;
+            }
+            @media ($md) {
+              height: 640px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rg-modal-content {
+    margin: 40px 16px;
+    @media ($sm) {
+      margin: 40px auto;
+    }
+
+    @media ($sm) {
+      width: 80%;
+    }
+    @media ($md) {
+      width: 934px;
+    }
+
+    .rg-modal-header {
+      color: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      i {
+        font-size: 20px;
+        cursor: pointer;
+
+        &.disable {
+          opacity: 0.4;
+          pointer-events: none;
+        }
+      }
+      span {
+        font-size: 13px;
+        line-height: 19px;
+        cursor: pointer;
+
+        @media ($md) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+    .rg-modal-body {
+      width: 100%;
+      display: inline-block;
+
+      .modal-img-outer {
+        @media ($xs) {
+          height: 218px;
+        }
+        @media ($sm) {
+          width: 40%;
+          float: left;
+        }
+
+        .modal-img {
+          background-color: #fedfb6;
+          background-image: url("https://i.imgur.com/cOlQpx7.png");
+          background-repeat: no-repeat;
+          background-size: 80%;
+          background-position: center bottom;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+
+          @media ($sm) {
+            background-image: url("https://i.imgur.com/pVItSUK.png");
+            background-size: contain;
+            height: 640px;
+          }
+        }
+      }
+
+      .rg-modal-form {
+        padding: 32px 16px;
+        background: #ffffff;
+
+        @media ($sm) {
+          width: 60%;
+          float: left;
+          padding: 48px 40px;
+        }
+
+        p {
+          &.heading-txt {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 700;
+            margin-bottom: 16px;
+
+            @media ($md) {
+              font-size: 24px;
+              line-height: 36px;
+            }
+          }
+        }
+
+        .form-group {
+          margin-bottom: 8px;
+          @media ($md) {
+            margin-bottom: 14px;
+          }
+
+          input {
+            width: 100%;
+            border: 1px solid rgba(32, 25, 40, 0.2);
+            outline: 0;
+            font-size: 8px;
+            line-height: 12px;
+            color: #1f1827;
+            height: 32px;
+            padding: 10px 8px;
+
+            @media ($md) {
+              font-size: 12px;
+              line-height: 1;
+              height: 40px;
+            }
+
+            &::placeholder {
+              color: rgba(32, 25, 40, 0.5);
+            }
+          }
+        }
+
+        button {
+          background: #1f1827;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          border-radius: 0;
+          padding: 8px 12px;
+          margin-top: 8px;
+
+          @media ($md) {
+            padding: 10px 16px;
+          }
+        }
+
+        .ftr-text {
+          text-align: center;
+          margin-top: 16px;
+
+          p {
+            font-size: 8px;
+            line-height: 12px;
+
+            @media ($md) {
+              font-size: 12px;
+              line-height: 16px;
+            }
+
+            &.txt {
+              font-size: 10px;
+              line-height: 15px;
+
+              @media ($md) {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

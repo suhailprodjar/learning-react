@@ -68,72 +68,29 @@
       }
     }
 
-    .banner-header {
-      text-align: center;
-      min-height: 116px;
-      background: transparent;
-      padding: 16px 0;
-      background-color: #ffffff;
-      box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.1);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-
-      @media ($sm) {
-        min-height: 72px;
-        padding: 12px 0;
-        text-align: left;
-      }
-
-      a.logo {
-        display: inline-block;
-        color: #1f1827;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 48px;
-        @media ($xs) {
-          margin-bottom: 24px;
-          font-size: 16px;
-          line-height: 24px;
-        }
-      }
-
-      button {
-        background-color: #ffffff;
-        border-color: #3f3151;
-        padding: 8px;
-        font-size: 13px;
-        line-height: 1.41;
-        text-align: center;
-        color: #3f3151;
-        border-radius: 0;
-
-        &:focus {
-          box-shadow: none;
-        }
-        &:first-child {
-          margin-right: 10px;
-        }
-
-        @media ($md) {
-          font-size: 16px;
-          line-height: 24px;
-          padding: 8px 12px;
-        }
-
-        &.active {
-          background-color: #1f1827;
-          color: #fff;
-        }
-      }
-    }
-
     .banner-content {
       padding: 0 24px;
       text-align: center;
       width: 100%;
+      opacity: 0;
+      animation: fadeInanimtion 0.4s ease-in 0;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+
+      @keyframes fadeInanimtion {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(0);
+        }
+      }
 
       @media ($sm) {
         text-align: left;
@@ -228,35 +185,46 @@
 
     i {
       display: inline-block;
-      color: #fff;
-      font-size: 16px;
-      line-height: 32px;
-      text-align: center;
-
-      @media ($xs) {
-        position: absolute;
-        top: 30px;
-        left: 20px;
-        font-size: 20px;
-      }
-
       @media ($sm) {
         margin-bottom: 20px;
       }
-      @media ($md) {
-        line-height: 40px;
+
+      &.pyt-star-outline-16 {
+        color: #fff;
+        line-height: 32px;
+        text-align: center;
+        font-size: 16px;
+
+        @media ($xs) {
+          font-size: 20px;
+          position: absolute;
+          top: 30px;
+          left: 20px;
+        }
+
+        @media ($md) {
+          line-height: 40px;
+        }
+
+        &:before {
+          width: 32px;
+          height: 32px;
+          background: #1f1827;
+          border-radius: 5px;
+          transform: rotate(45deg);
+          display: inline-block;
+          @media ($md) {
+            width: 40px;
+            height: 40px;
+          }
+        }
       }
 
-      &:before {
-        width: 32px;
-        height: 32px;
-        background: #1f1827;
-        border-radius: 5px;
-        transform: rotate(45deg);
-        display: inline-block;
-        @media ($md) {
-          width: 40px;
-          height: 40px;
+      &.pyt-badge-24 {
+        font-size: 24px;
+
+        @media ($sm) {
+          font-size: 30px;
         }
       }
     }
@@ -354,10 +322,16 @@
       padding: 24px 20px;
       cursor: pointer;
       transition: background 0.5s ease-out;
+      background: #ffffff;
 
-      &:hover {
+      &:hover,
+      &.active {
         background: #1f1827;
         box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.15);
+
+        i {
+          color: #ffffff;
+        }
 
         p,
         p span,
@@ -367,14 +341,36 @@
       }
 
       p {
-        margin-bottom: 32px;
         color: #444444;
+        margin-bottom: 16px;
+        @media ($xs) {
+          font-size: 11px;
+          line-height: 20px;
+        }
+        @media ($sm) {
+          margin-bottom: 32px;
+        }
+        span {
+          @media ($xs) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      i {
+        @media ($xs) {
+          margin-bottom: 16px;
+        }
       }
 
       a {
-        font-size: 13px;
+        font-size: 9px;
         line-height: 24px;
         color: #333333;
+        @media ($sm) {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -488,6 +484,9 @@
       margin-bottom: 80px;
     }
 
+    .testimonial-card-slider {
+    }
+
     .testimonial-card {
       position: relative;
       padding-top: 40px;
@@ -562,6 +561,42 @@
               line-height: 24px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.cardwrap-slider {
+  .slick-track {
+    display: flex !important;
+    .slick-slide {
+    }
+  }
+
+  .slick-dots {
+    li {
+      margin: 0;
+      width: 16px;
+      height: 16px;
+
+      button {
+        width: 16px;
+        height: 16px;
+
+        &:before {
+          width: 16px;
+          height: 16px;
+          line-height: 16px;
+          color: grey;
+          opacity: 0.3;
+        }
+      }
+
+      &.slick-active {
+        button:before {
+          opacity: 1;
+          color: red;
         }
       }
     }
