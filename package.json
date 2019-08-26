@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Front end application for learning-react",
   "engines": {
-    "node": "8.15.1"
+    "node": "8.11.1"
   },
   "main": "index.js",
   "author": "Akbar Basha KM",
@@ -69,19 +69,15 @@
     "copy:bootstrap:public": "cp -av markup/bootstrap public/bootstrap",
     "copy:css:client": "yarn copy:css:public && yarn copy:bootstrap:public",
     "copy:css:prod": "yarn copy:css:build && yarn copy:bootstrap:build",
-    
     "start": "node build/bundle.js",
     "build": "rm -rf build && rm -rf public && webpack  --config webpack.server.js && webpack -p --config webpack.client.prod.js --mode production && yarn run-css && yarn copy:css:prod && yarn copy:css:client",
     "heroku-postbuild": "npm install && npm run build",
-    
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "build-client": "webpack --config webpack.client.js && yarn run-css && yarn copy:css:client",
     "local-start": "npm run build-client && npm-run-all --parallel dev:*",
-    
     "precommit": "pretty-quick --staged",
-    
     "build-css": "node-sass-chokidar --include-path ./styles --include-path ./node_modules styles/ -o styles/",
     "export-css": "node-sass-chokidar --include-path ./styles --include-path ./node_modules styles/ -o markup/",
     "run-css": "yarn build-css && yarn export-css",

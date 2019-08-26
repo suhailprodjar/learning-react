@@ -1,4 +1,3 @@
-
 export const FETCH_ARTICLES = "fetch_articles";
 
 export const fetchArticles = source => async dispatch => {
