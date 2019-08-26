@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
 
-  <body>
+  <body class="is_hide-hdr">
     <div class="content-wrap">
       <div class="home">
         <!-- header starts -->
-        <header>
+        <header class="is_mobile_fixed">
           <div class="container">
             <div class="row vertical-center">
               <div class="col-12 col-sm-7">
@@ -25,7 +25,7 @@
               <div class="col-12 col-sm-5 is_mobile">
                 <button
                   class="btn active"
-                  onclick="location.href='pdg_flow.html';"
+                  onclick="location.href='pdg_flow/index.html';"
                 >
                   Student Register
                 </button>
@@ -131,31 +131,121 @@
                 Browse through all the courses right from designing to
                 devlopment and marketing, content writing etc.
               </p>
-
-              <div class="cardwrap-slider">
-                <div>
-                  <div class="card-wrap active">
-                    <i class="pyt-badge-24"></i>
-                    <p>
-                      <span>Enterprise Software Development</span>
-                      Create complex enterprise software, ensure reliable
-                      software integration, modernise your legacy system.
-                    </p>
-                    <a href="#">Explore More</a>
+              <!-- Hide for mobile -->
+              <div class="d-none d-sm-block">
+                <div class="row">
+                  <div class="col-12 col-sm-4">
+                    <div class="card-wrap active">
+                      <i class="pyt-badge-24"></i>
+                      <p>
+                        <span>Enterprise Software Development</span>
+                        Create complex enterprise software, ensure reliable
+                        software integration, modernise your legacy system.
+                      </p>
+                      <a href="#">Explore More</a>
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <div class="card-wrap">
-                    <i class="pyt-badge-24"></i>
-                    <p>
-                      <span>Enterprise Software Development</span>
-                      Create complex enterprise software, ensure reliable
-                      software integration, modernise your legacy system.
-                    </p>
-                    <a href="#">Explore More</a>
+                  <div class="col-12 col-sm-4">
+                    <div class="card-wrap">
+                      <i class="pyt-badge-24"></i>
+                      <p>
+                        <span>Enterprise Software Development</span>
+                        Create complex enterprise software, ensure reliable
+                        software integration, modernise your legacy system.
+                      </p>
+                      <a href="#">Explore More</a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="card-wrap">
+                      <i class="pyt-badge-24"></i>
+                      <p>
+                        <span>Enterprise Software Development</span>
+                        Create complex enterprise software, ensure reliable
+                        software integration, modernise your legacy system.
+                      </p>
+                      <a href="#">Explore More</a>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- Hide for mobile -->
+              <!-- Only visible for mobile -->
+              <div class="quality-accordian d-block d-sm-none" id="accordion">
+                <div class="card">
+                  <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                      <i class="pyt-badge-24"></i> Enterprise Software Development
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                      Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                      <i class="pyt-badge-24"></i> Mobile App Development
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                      <i class="pyt-badge-24"></i> UX / UI Design
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                      <i class="pyt-badge-24"></i> Mobile App Development
+                    </a>
+                  </div>
+                  <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                      <i class="pyt-badge-24"></i> UX / UI Design
+                    </a>
+                  </div>
+                  <div id="collapseFive" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                      <i class="pyt-badge-24"></i> Mobile App Development
+                    </a>
+                  </div>
+                  <div id="collapseSix" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Only visible for mobile -->
             </div>
           </div>
 
@@ -177,7 +267,7 @@
                 </div>
                 <div class="col-12 col-sm-5 pl-40">
                   <div class="rgtside-img">
-                    <img src="https://i.imgur.com/aFIqJRz.png" />
+                    <img src="https://i.imgur.com/PnnBhyX.png" />
                   </div>
                 </div>
               </div>
@@ -204,7 +294,7 @@
                 </div>
                 <div class="col-12 col-sm-5 pr-40">
                   <div class="rgtside-img">
-                    <img src="https://i.imgur.com/aFIqJRz.png" />
+                    <img src="https://i.imgur.com/ICClDyH.png" />
                   </div>
                 </div>
               </div>
@@ -223,16 +313,16 @@
                   A brand is more than a logo. It is a unified combination of
                   elements that make your business and brand successful.
                 </p>
-
-                <div class="testimonial-card-slider">
-                  <div>
+                
+                <div class="row">
+                  <div class="col-12 col-sm-6">
                     <div class="testimonial-card">
                       <div class="info">
                         <img
                           src="https://ca.slack-edge.com/T02B68RPW-U6XSHU79T-d9fe20ffac65-72"
                           alt=""
                         />
-
+    
                         <p>
                           <span>Suhail mohamed</span>
                           Lorem ipsum Lorem ipsum
@@ -246,14 +336,14 @@
                       </p>
                     </div>
                   </div>
-                  <div>
+                  <div class="col-12 col-sm-6">
                     <div class="testimonial-card">
                       <div class="info">
                         <img
                           src="https://ca.slack-edge.com/T02B68RPW-U6XSHU79T-d9fe20ffac65-72"
                           alt=""
                         />
-
+    
                         <p>
                           <span>Suhail mohamed</span>
                           Lorem ipsum Lorem ipsum
@@ -267,14 +357,14 @@
                       </p>
                     </div>
                   </div>
-                  <div>
+                  <div class="col-12 col-sm-6">
                     <div class="testimonial-card">
                       <div class="info">
                         <img
                           src="https://ca.slack-edge.com/T02B68RPW-U6XSHU79T-d9fe20ffac65-72"
                           alt=""
                         />
-
+    
                         <p>
                           <span>Suhail mohamed</span>
                           Lorem ipsum Lorem ipsum
@@ -287,6 +377,12 @@
                         behavior.
                       </p>
                     </div>
+                  </div>
+                  <div class="col-12 text-right">
+                    <ul class="list-unstyled textimonial-arrow">
+                      <li><i class="pyt-arrow-left-16"></i></li>
+                      <li><i class="pyt-arrow-right-16"></i></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -423,10 +519,8 @@
     <!-- footer ends  -->
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://kenwheeler.github.io/slick/slick/slick.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
     $("document").ready(function() {
       $(window).on("resize", function(e) {
@@ -440,9 +534,25 @@
         if (newWindowWidth < 767) {
           $(".is_mobile").addClass("text-center");
           $(".is_mobile").removeClass("text-right");
+          $(".is_mobile_fixed").addClass("fixed");
+          $(".is_hide-hdr").removeClass("hide-hdr");
+          
         } else {
           $(".is_mobile").addClass("text-right");
           $(".is_mobile").removeClass("text-center");
+          $(".is_mobile_fixed").removeClass("fixed");
+          $(".is_hide-hdr").addClass("hide-hdr");
+
+          // HEADER STICKY
+          $(window).scroll(function() {
+            scroll = $(window).scrollTop();
+
+            if (scroll >= 104) {
+              $("header").addClass("fixed");
+            } else {
+              $("header").removeClass("fixed");
+            }
+          });
         }
       }
 
@@ -453,39 +563,6 @@
       $(".bg-overlay, .close-rg-modal").click(function(e) {
         $("body").removeClass("show-modal");
       });
-
-      // SLIDER
-      $(".cardwrap-slider").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        responsive: [
-          {
-            breakpoint: 767,
-            settings: {
-              infinite: false,
-              centerMode: true,
-              centerPadding: "12%",
-              dots: true,
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
-      $(".cardwrap-slider").slick("slickNext");
-    });
-
-    // HEADER STICKY
-    $(window).scroll(function() {
-      var headerSec = document.getElementsByClassName("banner-header")[0]
-        .clientHeight;
-      scroll = $(window).scrollTop();
-
-      if (scroll >= headerSec) {
-        headerSec.addClass("fixed");
-      } else {
-        headerSec.removeClass("fixed");
-      }
     });
   </script>
 </html>

@@ -57,6 +57,11 @@ img {
 .fw {
   width: 100%;
 }
+.hide-hdr {
+  .content-wrap {
+    padding-top: 0;
+  }
+}
 .content-wrap {
   padding-top: 116px;
   @media (min-width: 768px) {

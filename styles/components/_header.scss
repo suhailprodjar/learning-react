@@ -3,10 +3,8 @@ header {
   min-height: 116px;
   background: transparent;
   padding: 16px 0;
-  background-color: #ffffff;
-  box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 32px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -15,6 +13,14 @@ header {
     min-height: 72px;
     padding: 12px 0;
     text-align: left;
+    box-shadow: none;
+  }
+
+  &.fixed {
+    position: fixed;
+    box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    top: 0;
   }
 
   a.logo {
