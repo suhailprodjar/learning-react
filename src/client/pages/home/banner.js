@@ -1,6 +1,12 @@
 import React from 'react';
+import { withLastLocation } from 'react-router-last-location';
 
-function BanerHeader() {
+const triggerButtonAction = (history, path) => {
+    history.replace(path);
+}
+
+function  BanerHeader(props) {
+    const { history } = props;
     return (
         <div className="banner-header">
             <div className="container">
@@ -9,8 +15,12 @@ function BanerHeader() {
                         <a href="" className="logo">LearnGrow</a>
                     </div>
                     <div className="col-12 col-sm-5 is_mobile">
-                        <button className="btn active">Student Register</button>
-                        <button className="btn">Trainer Register</button>
+                        <button className="btn active" onClick={() => triggerButtonAction(history, '/register-learner')}>
+                            Student Register
+                        </button>
+                        <button className="btn" onClick={() => triggerButtonAction(history, '/register-trainer')}>
+                            Trainer Register
+                        </button>
                     </div>
                 </div>
             </div>
@@ -50,13 +60,13 @@ function BannerContent() {
         </div>
     )
 }
-function HomeBanner() {
+function HomeBanner(props) {
     return (
         <div className="hero-banner">
-            <BanerHeader />
+            <BanerHeader {...props}/>
             <BannerContent />
         </div>
     )
 }
 
-export default HomeBanner;
+export default withLastLocation(HomeBanner);
