@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { setMessage } from "../../redux/reducers/appReducer";
 
 function WorksSection({ works = [] }) {
   return works.map((work, index) => {
@@ -17,7 +18,10 @@ function WorksSection({ works = [] }) {
   });
 }
 
-function HowToWorks({ works }) {
+function HowToWorks({ works, message, updateMessage = (text) => { alert(text)} }) {
+  if (!message) {
+    updateMessage("Hi, I'm from client!");
+  }
   return (
     <div className="how-to-works">
       <div className="container">
@@ -36,6 +40,10 @@ function HowToWorks({ works }) {
           </div>
         </div>
       </div>
+      <div>
+        <h1>Testimonials page</h1>
+        <p>Redux: {message}</p>
+      </div>
     </div>
   );
 }
@@ -50,13 +58,17 @@ function mapStateToProps({ app = {} }) {
   }, {
     header: 'Post your learning requirement',
     content: 'Want to learn something? Just enter details such as subject or category, locality and preference.'
-  }] } = app;
+  }], message = 'I m not run' } = app;
   return {
-    works
+    works,
+    message
   };
 }
 
 export default connect(
   mapStateToProps,
-  null
+  dispatch => ({
+    updateMessage: txt => dispatch(setMessage(txt))
+  })
+
 )(HowToWorks);

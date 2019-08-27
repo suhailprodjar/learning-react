@@ -5,14 +5,15 @@ import Home from './pages/home';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <Fragment>
-          <Header />
-          <Switch>
-            <Route path="/*" exact={true} component={Home} />
-          </Switch>
-        </Fragment>
-      </Router>
+      <Home />
+      // <Router>
+      //   <Fragment>
+      //     <Header />
+      //     <Switch>
+      //       <Route path="/*" exact={true} component={Home} />
+      //     </Switch>
+      //   </Fragment>
+      // </Router>
     );
   }
 }
