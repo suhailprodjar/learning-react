@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PDG Third Flow</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+
+  <body class="show-modal">
+    <div class="content-wrap">
+      <div class="pdg-modal pdg-3">
+        <!-- top bar starts -->
+        <ul class="list-unstyled tab-progress-bar">
+          <li class="active"></li>
+          <li class="active"></li>
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <!-- top bar ends -->
+
+        <div class="pdg-modal-content">
+          <div class="pdg-modal-header">
+            <span class="pdg-close">Close</span>
+          </div>
+
+          <div class="pdg-modal-body">
+            <!-- pdg 3 -->
+            <h2>What type of <b>PHP Training</b> do you want to take?</h2>
+            <div class="clearfix pdgcard-outer">
+              <div class="pdg-card">
+                <input
+                  name="option"
+                  type="checkbox"
+                  id="opt_1"
+                  value="Option"
+                />
+                <label for="opt_1">
+                  <i class="round-tick"></i>
+                  <p>
+                    <span>PHP CMS</span>
+                    The definition of a CMS is an application that provides
+                    capabilities for multiple users with different permission
+                    levels to manage content, data or information of a website
+                    project, or internet / intranet application.
+                  </p>
+                </label>
+              </div>
+              <div class="pdg-card">
+                <input
+                  name="option"
+                  type="checkbox"
+                  id="opt_2"
+                  value="Option"
+                />
+                <label for="opt_2">
+                  <i class="round-tick"></i>
+                  <p>
+                    <span>PHP MySQL</span>
+                    The definition of a CMS is an application that provides
+                    capabilities for multiple users with different permission
+                    levels to manage content, data or information of a website
+                    project, or internet / intranet application.
+                  </p>
+                </label>
+              </div>
+              <div class="pdg-card">
+                <input
+                  name="option"
+                  type="checkbox"
+                  id="opt_3"
+                  value="Option"
+                />
+                <label for="opt_3">
+                  <i class="round-tick"></i>
+                  <p>
+                    <span>PHP Realtime Project</span>
+                    The definition of a CMS is an application that provides
+                    capabilities for multiple users with different permission
+                    levels to manage content, data or information of a website
+                    project, or internet / intranet application.
+                  </p>
+                </label>
+              </div>
+              <div class="pdg-card">
+                <input
+                  name="option"
+                  type="checkbox"
+                  id="opt_4"
+                  value="Option"
+                />
+                <label for="opt_4">
+                  <i class="round-tick"></i>
+                  <p>
+                    <span>PHP Web 2.0</span>
+                    The definition of a CMS is an application that provides
+                    capabilities for multiple users with different permission
+                    levels to manage content, data or information of a website
+                    project, or internet / intranet application.
+                  </p>
+                </label>
+              </div>
+              <div class="pdg-card">
+                <input
+                  name="option"
+                  type="checkbox"
+                  id="opt_5"
+                  value="Option"
+                />
+                <label for="opt_5">
+                  <i class="round-tick"></i>
+                  <p>
+                    <span>PHP AJAX</span>
+                    The definition of a CMS is an application that provides
+                    capabilities for multiple users with different permission
+                    levels to manage content, data or information of a website
+                    project, or internet / intranet application.
+                  </p>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="pdg-modal-footer">
+            <ul class="list-unstyled footer-arrow">
+              <li><i class="pyt-arrow-left-16"></i></li>
+              <li><i class="pyt-arrow-right-16"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-overlay pdg-overlay"></div>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+    $("document").ready(function() {
+      $(".pdg-close").click(function() {
+        $("body").removeClass("show-modal");
+      });
+    });
+  </script>
+</html>
