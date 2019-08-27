@@ -1,19 +1,20 @@
-import React, { Component, Fragment } from "react";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import Header from './pages/home/header';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundry";
+import { HomeLoadable } from "./components/LoadableComponents";
 import Home from './pages/home';
 class App extends Component {
   render() {
     return (
-      <Home />
-      // <Router>
-      //   <Fragment>
-      //     <Header />
-      //     <Switch>
-      //       <Route path="/*" exact={true} component={Home} />
-      //     </Switch>
-      //   </Fragment>
-      // </Router>
+      <div className={'content-wrap'}>
+        <ErrorBoundary>
+          <Switch>
+            <Route path="/"
+              exact={true}
+              component={Home} />
+          </Switch>
+        </ErrorBoundary>
+      </div>
     );
   }
 }

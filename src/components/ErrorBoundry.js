@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 class ErrorBoundary extends React.Component {
@@ -23,14 +23,14 @@ class ErrorBoundary extends React.Component {
     if (state.errorInfo) {
       // Error path
       return (
-        <>
+        <Fragment>
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: "pre-wrap" }}>
             {state.error && state.error.toString()}
             <br />
             {state.errorInfo.componentStack}
           </details>
-        </>
+        </Fragment>
       );
     }
     // Normally, just render children
