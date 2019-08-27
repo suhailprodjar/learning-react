@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 function WorksSection({ works = [] }) {
   return works.map((work, index) => {
     return (
-      <div className="col-12 col-sm-4" key={IDBIndex}>
+      <div className="col-12 col-sm-4" key={index}>
         <div className="card-wrap active">
           <i className="pyt-star-outline-16"></i>
           <p>
@@ -26,8 +26,8 @@ function HowToWorks({ works }) {
             <h3 className="heading-txt">How to works?</h3>
             <p className="heading-txt">
               LearnGrow is India’s largest online platform with a network of
-              most trusted local Tutors across India. Post and connect with the
-              tutors in your locality.
+              most trusted local Tutors across India. Post and connect with
+              the tutors in your locality.
             </p>
 
             <div className="row">
@@ -41,7 +41,16 @@ function HowToWorks({ works }) {
 }
 
 function mapStateToProps({ app = {} }) {
-  const { works = [] } = app;
+  const { works = [{
+    header: 'Post your learning requirement',
+    content: 'Want to learn something? Just enter details such as subject or category, locality and preference.'
+  }, {
+    header: 'Post your learning requirement',
+    content: 'Want to learn something? Just enter details such as subject or category, locality and preference.'
+  }, {
+    header: 'Post your learning requirement',
+    content: 'Want to learn something? Just enter details such as subject or category, locality and preference.'
+  }] } = app;
   return {
     works
   };

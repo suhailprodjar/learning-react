@@ -1,86 +1,62 @@
 {
-  "name": "learning-react",
-  "version": "1.0.0",
-  "description": "Front end application for learning-react",
-  "engines": {
-    "node": "8.11.1"
-  },
-  "main": "index.js",
-  "author": "Akbar Basha KM",
+  "name": "learning-web",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "compression": "^1.7.3",
-    "compression-webpack-plugin": "^2.0.0",
-    "concurrently": "4.1.0",
-    "express": "4.16.4",
-    "nodemon": "1.18.10",
-    "npm-run-all": "4.1.5",
-    "prop-types": "^15.7.2",
-    "react": "16.8.2",
-    "react-dom": "16.8.2",
-    "react-helmet": "5.2.0",
-    "react-lazy-load-image-component": "^1.3.2",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.5.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
+    "react-helmet-async": "^1.0.2",
+    "react-lazyload": "^2.6.2",
     "react-loadable": "^5.5.0",
     "react-redux": "6.0.0",
-    "react-router-config": "1.0.0-beta.4",
-    "react-router-dom": "4.3.1",
+    "react-router-dom": "^4.2.2",
     "react-router-last-location": "^2.0.1",
+    "react-scripts": "2.0.5",
+    "react-scroll": "^1.7.10",
     "redux": "4.0.1",
     "redux-thunk": "2.3.0",
-    "serialize-javascript": "1.6.1",
-    "uglifyjs-webpack-plugin": "^2.1.1",
-    "webpack": "4.39.2",
-    "webpack-dev-server": "3.1.14",
-    "webpack-merge": "4.2.1",
-    "webpack-node-externals": "1.7.2"
+    "webpack-bundle-analyzer": "^3.3.2",
+    "yarn": "^1.12.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "browser-sync": "^2.23.6",
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-config-react-app": "^3.0.7",
-    "eslint-plugin-flowtype": "^2.50.3",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-react-hooks": "^1.5.0",
-    "lint-staged": "^8.1.4",
+    "lint-staged": "^7.2.0",
     "node-sass-chokidar": "^1.3.4",
-    "prettier": "^1.16.4",
-    "pretty-quick": "^1.10.0",
     "react-bootstrap": "^1.0.0-beta.5",
-    "sass": "^1.17.2",
-    "webpack-cli": "^3.2.3"
+    "sass": "^1.17.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint src -c .eslintrc --ext js,jsx"
+    ],
+    "src/**/*.{js,jsx,json,html,less}": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "public/**/*.{html}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "scripts": {
-    "copy:css:build": "cp markup/index.css build/index.css",
-    "copy:bootstrap:build": "cp -av markup/bootstrap build/bootstrap",
-    "copy:css:public": "cp markup/index.css public/index.css",
-    "copy:bootstrap:public": "cp -av markup/bootstrap public/bootstrap",
-    "copy:css:client": "yarn copy:css:public && yarn copy:bootstrap:public",
-    "copy:css:prod": "yarn copy:css:build && yarn copy:bootstrap:build",
-    "start": "node build/bundle.js",
-    "build": "rm -rf build && rm -rf public && webpack  --config webpack.server.js && webpack -p --config webpack.client.prod.js --mode production && yarn run-css && yarn copy:css:prod && yarn copy:css:client",
-    "heroku-postbuild": "npm install && npm run build",
-    "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch",
-    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "build-client": "webpack --config webpack.client.js && yarn run-css && yarn copy:css:client",
-    "local-start": "npm run build-client && npm-run-all --parallel dev:*",
-    "precommit": "pretty-quick --staged",
-    "build-css": "node-sass-chokidar --include-path ./styles --include-path ./node_modules styles/ -o styles/",
-    "export-css": "node-sass-chokidar --include-path ./styles --include-path ./node_modules styles/ -o markup/",
-    "run-css": "yarn build-css && yarn export-css",
-    "markup": "yarn run-css yarn && browser-sync start -s --serveStatic 'markup' --files 'markup' --port 4000"
-  }
+    "start": "react-scripts start",
+    "build": "yarn public-css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "public-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o public/",
+    "public-sync": "yarn && browser-sync start -s --serveStatic 'public' --files 'public' --port 4000"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

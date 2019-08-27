@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { AppConfig } from "../../../../app-config";
 import { withLastLocation } from "react-router-last-location";
+import { AppConfig } from "../../app-config";
 
 function Header({ location }) {
   return (
