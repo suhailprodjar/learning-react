@@ -26,9 +26,13 @@ class App extends Component {
             <Route path="/"
               exact={true}
               component={Home} />
+            <Route path="/register-trainer"
+              exact={true}
+              component={Home} />
           </Switch>
         </ErrorBoundary>
         <Footer />
+        <div className="bg-overlay"></div>
       </div>
     );
   }
