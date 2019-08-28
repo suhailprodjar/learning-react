@@ -6,7 +6,7 @@ function WorksSection({ works = [] }) {
   return works.map((work, index) => {
     return (
       <div className="col-12 col-sm-4" key={index}>
-        <div className="card-wrap active">
+        <div className="card-wrap">
           <i className="pyt-star-outline-16"></i>
           <p>
             <span>{work.header}</span>

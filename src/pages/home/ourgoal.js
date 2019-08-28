@@ -21,7 +21,7 @@ function OurGoal() {
                     </div>
                     <div className="col-12 col-sm-5 pr-40">
                         <div className="rgtside-img">
-                            <img src="https://i.imgur.com/ICClDyH.png" />
+                            <img src="https://i.imgur.com/ICClDyH.png" alt='' />
                         </div>
                     </div>
                 </div>

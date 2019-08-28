@@ -1,10 +1,23 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundry";
-import { HomeLoadable } from "./components/LoadableComponents";
 import Home from './pages/home';
 import './index.scss'
+import Footer from "./pages/footer";
+import isServer from "./helper/utils/isServer";
+import isMobile from "./helper/utils/isMobile";
 class App extends Component {
+
+  componentDidMount = () => {
+    if (!isServer()) {
+      let element = document.getElementsByClassName('is_hide-hdr')[0];
+      if (isMobile()) {
+        element.classList.remove('hide-hdr');
+      } else {
+        element.classList.add('hide-hdr');
+      }
+    }
+  }
   render() {
     return (
       <div className={'content-wrap'}>
@@ -15,6 +28,7 @@ class App extends Component {
               component={Home} />
           </Switch>
         </ErrorBoundary>
+        <Footer />
       </div>
     );
   }
