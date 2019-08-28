@@ -2,13 +2,12 @@ import express from 'express';
 
 import serverRenderer from '../middleware/renderer';
 import { store } from '../../src/redux/configureStore';
-import { setMessage } from '../../src/redux/reducers/appReducer';
 
 const router = express.Router();
 const path = require('path');
 
 const actionIndex = (req, res, next) => {
-    store.dispatch(setMessage("Hi, I'm from server!"));
+    //store.dispatch(setMessage("Hi, I'm from server!"));
 
     serverRenderer(store)(req, res, next);
 };
