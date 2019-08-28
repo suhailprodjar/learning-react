@@ -3,7 +3,7 @@ import Loadable from 'react-loadable';
 
 import indexController from './controller/index';
 
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
 // initialize the application and create the routes
 const app = express();
