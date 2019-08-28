@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundry";
 import { HomeLoadable } from "./components/LoadableComponents";
 import Home from './pages/home';
+import './index.scss'
 class App extends Component {
   render() {
     return (

@@ -18,10 +18,7 @@ function WorksSection({ works = [] }) {
   });
 }
 
-function HowToWorks({ works, message, updateMessage = (text) => { alert(text)} }) {
-  if (!message) {
-    updateMessage("Hi, I'm from client!");
-  }
+function HowToWorks({ works }) {
   return (
     <div className="how-to-works">
       <div className="container">
@@ -40,10 +37,6 @@ function HowToWorks({ works, message, updateMessage = (text) => { alert(text)} }
           </div>
         </div>
       </div>
-      <div>
-        <h1>Testimonials page</h1>
-        <p>Redux: {message}</p>
-      </div>
     </div>
   );
 }
@@ -58,17 +51,13 @@ function mapStateToProps({ app = {} }) {
   }, {
     header: 'Post your learning requirement',
     content: 'Want to learn something? Just enter details such as subject or category, locality and preference.'
-  }], message = 'I m not run' } = app;
+  }] } = app;
   return {
-    works,
-    message
+    works
   };
 }
 
 export default connect(
-  mapStateToProps,
-  dispatch => ({
-    updateMessage: txt => dispatch(setMessage(txt))
-  })
+  mapStateToProps, null
 
 )(HowToWorks);
