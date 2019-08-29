@@ -2,25 +2,29 @@
   width: 100%;
   color: #ffffff;
   background: #201928;
-  position: absolute;
-  z-index: 1;
+  position: fixed;
+  z-index: 100;
   bottom: -124px;
   transition: all, opacity 0.4s ease-in-out;
   opacity: 0;
   visibility: hidden;
 
   @media ($sm) {
-    width: 60%;
+    width: 50%;
+    border-radius: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   &.blue {
-    background: #489cff;
+    background: rgba(31, 24, 38, 0.8);
   }
 
   &.show {
-    bottom: 56px;
+    bottom: 0px;
+    @media ($sm) {
+      bottom: 56px;
+    }
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15);
     opacity: 1;
     visibility: visible;
@@ -39,7 +43,7 @@
       padding: 24px 56px 24px 56px;
     }
     @media ($md) {
-      padding: 32px 56px 32px 56px;
+      padding: 12px 28px 12px 57px;
     }
     span {
       display: block;
@@ -72,7 +76,7 @@
     height: 24px;
     background: #ffffff;
     display: inline-block;
-    color: #489cff;
+    color: rgba(31, 24, 38, 1);
     border-radius: 100%;
     font-size: 20px;
     line-height: 24px;
@@ -81,7 +85,7 @@
     left: 12px;
 
     @media ($sm) {
-      top: 36px;
+      top: 30px;
       left: 20px;
     }
   }

@@ -6,6 +6,7 @@ import './index.scss'
 import Footer from "./pages/footer";
 import isServer from "./helper/utils/isServer";
 import isMobile from "./helper/utils/isMobile";
+import Notification from "./components/Notification";
 class App extends Component {
 
   componentDidMount = () => {
@@ -33,6 +34,7 @@ class App extends Component {
         </ErrorBoundary>
         <Footer />
         <div className="bg-overlay"></div>
+        <Notification />
       </div>
     );
   }

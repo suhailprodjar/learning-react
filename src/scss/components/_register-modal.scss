@@ -148,6 +148,14 @@
               line-height: 36px;
             }
           }
+
+          &.has-error {
+            font-size: 10px;
+            color: #f44336;
+            font-weight: normal;
+            line-height: 0px;
+            margin-bottom: 0px;
+          }
         }
 
         .form-group {
@@ -162,7 +170,7 @@
             line-height: 22px;
             color: #767676;
           }
-
+          select,
           input {
             width: 100%;
             border: 1px solid rgba(32, 25, 40, 0.2);
@@ -182,6 +190,10 @@
             &::placeholder {
               color: rgba(32, 25, 40, 0.5);
             }
+          }
+
+          .has-error {
+            border: 1px solid #f44336
           }
 
           &.mbl-no {

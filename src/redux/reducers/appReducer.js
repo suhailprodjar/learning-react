@@ -1,8 +1,9 @@
-import { FETCH_ARTICLES } from "../actions/index";
 
-export default (state = [], action) => {
+export default (state = {}, action) => {
   switch (action.type) {
-    case FETCH_ARTICLES:
+    case 'TUTOR_CREATED':
+      return action.payload;
+    case 'NOTIFICATION':
       return action.payload;
     default:
       return state;
