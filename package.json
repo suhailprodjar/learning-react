@@ -68,7 +68,8 @@
     "css": "yarn build-css && yarn public-css",
     "local-start": "yarn set-local && react-scripts start",
     "public-sync": "yarn css && yarn browser-sync start -s --serveStatic 'public' --files 'public' --port 4000",
-    "log": "heroku logs --tail -a learning-frontend"
+    "log": "heroku logs --tail -a learning-frontend",
+    "backend-log": "heroku logs --tail -a learning-backend"
   },
   "eslintConfig": {
     "extends": "react-app"
