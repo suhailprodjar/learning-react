@@ -59,7 +59,7 @@
   },
   "scripts": {
     "set-local": "cp .env.local .env",
-    "set-prod": "cp .env.production .env",
+    "set-prod": "cp .env.prod .env",
     "build": "yarn set-prod && yarn css && react-scripts build",
     "start": "NODE_ENV=production node server/bootstrap.js",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

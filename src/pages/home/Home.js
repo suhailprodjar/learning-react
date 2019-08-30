@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import HomeBanner from "./HomeBanner";
 import HowToWorks from "./OurWorks";
@@ -10,8 +10,15 @@ import IndividualTrainer from "../registration/trainer/Individual/IndividualTrai
 import InstituteTrainer from "../registration/trainer/Institute/InstituteTrainer";
 import DetailTrainer from "../registration/trainer/Individual/DetailsTrainer";
 import DetailInstitute from "../registration/trainer/Institute/DetailInstitute";
-
-function HomePage() {
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import getUserDetails from "../../redux/actions/getUserDetails";
+function HomePage(props) {
+  useEffect(() => {
+    if (props.tutorCode) {
+        props.getUserDetails();
+    }
+  }, [])
   return (
     <div className="home">
       <Header />
@@ -40,4 +47,20 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+const mapDispatchToProps = dispatch => {
+  return {
+      getUserDetails: bindActionCreators(
+          getUserDetails,
+          dispatch
+      )
+  };
+};
+
+function mapStateToProps({ app = {} }) {
+  const { tutorCode = '' } = app;
+  return {
+    tutorCode
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

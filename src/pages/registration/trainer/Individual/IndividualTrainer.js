@@ -49,16 +49,17 @@ class IndividualTrainer extends Component {
     }
     onSubmit = (e) => {
         e && e.preventDefault();
-        const { name }= this.state;
+        const { name, isInstitute }= this.state;
         const validation = checkMandatoryFields(this.state);
         if (!validation.hasError) {
             this.setState({
                 isLoading: true
             }, () => {                
                 this.props.triggerTutorRegister(this.state).then(({ code }) => {
-                    this.props.setStorage('tutor', {
+                    this.props.setToStorage('tutor', {
                         code,
-                        name
+                        name,
+                        isInstitute
                     })
                     this.closeModal('/detail-trainer')
                 });
