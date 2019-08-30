@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { withLastLocation } from "react-router-last-location";
 import { connect } from 'react-redux';
-import { bindActionCreators } from '../../../../../../../../Library/Caches/typescript/3.4/node_modules/redux';
+import { bindActionCreators } from 'redux';
 import triggerTutorRegister from '../../../../redux/actions/triggerTutorRegister';
 import { checkMandatoryFields } from '../../../../helper/utils/validation';
+import withStorage from '../../../../components/Storage';
 class IndividualTrainer extends Component {
     state = {
         name : '',
@@ -48,13 +49,18 @@ class IndividualTrainer extends Component {
     }
     onSubmit = (e) => {
         e && e.preventDefault();
+        const { name }= this.state;
         const validation = checkMandatoryFields(this.state);
         if (!validation.hasError) {
             this.setState({
                 isLoading: true
             }, () => {                
-                this.props.triggerTutorRegister(this.state).then(() => {
-                    this.closeModal('/')
+                this.props.triggerTutorRegister(this.state).then(({ code }) => {
+                    this.props.setStorage('tutor', {
+                        code,
+                        name
+                    })
+                    this.closeModal('/detail-trainer')
                 });
             })
         } else {
@@ -157,13 +163,6 @@ class IndividualTrainer extends Component {
     }
 }
 
-function mapStateToProps({ app = {} }) {
-    const { notification = '' } = app;
-    return {
-        notification
-    };
-}
-
 const mapDispatchToProps = dispatch => {
     return {
         triggerTutorRegister: bindActionCreators(
@@ -174,5 +173,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default withLastLocation(
-    connect(mapStateToProps, mapDispatchToProps)(IndividualTrainer)
+    withStorage(connect(null, mapDispatchToProps)(IndividualTrainer))
 );

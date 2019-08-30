@@ -17,10 +17,11 @@ export default function triggerTutorRegister(requestData) {
                             payload: {
                                 type: isInstitute ? 'INSTITUTOR' : 'TUTOR',
                                 tutorCode: response.tutorCode,
-                                status: 'REGISTER_SUCCEED'
+                                status: 'REGISTER_SUCCEED',
+                                name: response.name
                             }
                         });
-                        res('Promised resolved from fetch');
+                        res({ code: response.tutorCode});
                     }
                     res('Promised resolved from fetch');
                 },
