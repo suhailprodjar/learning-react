@@ -51,11 +51,12 @@ export default (store) => (req, res, next) => {
             '<div id="root"></div>',
             `<div id="root">${html}</div>`
         );
+        const reduxState = JSON.stringify(store.getState());
 
+        finalHtml = finalHtml.replace('"__SERVER_REDUX_STATE__"', reduxState);
         const extraChunks = extractAssets(manifest, modules).map(
             c => `<script type="text/javascript" src="/${c}"></script>`
         );
-
         finalHtml = finalHtml.replace('</body>', extraChunks.join('') + '</body>');
 
         // inject the rendered app into our html and send it

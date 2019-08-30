@@ -20,7 +20,7 @@ function AboutUS() {
                     </div>
                     <div className="col-12 col-sm-5 pl-40">
                         <div className="rgtside-img">
-                            <img src="https://i.imgur.com/PnnBhyX.png" />
+                            <img src="https://i.imgur.com/PnnBhyX.png" alt='' />
                         </div>
                     </div>
                 </div>
