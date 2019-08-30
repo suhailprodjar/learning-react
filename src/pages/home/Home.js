@@ -15,7 +15,7 @@ import { bindActionCreators } from 'redux';
 import getUserDetails from "../../redux/actions/getUserDetails";
 function HomePage(props) {
   useEffect(() => {
-    if (props.tutorCode) {
+    if (!props.tutorCode) {
         props.getUserDetails();
     }
   }, [])
@@ -32,14 +32,14 @@ function HomePage(props) {
           exact={true}
           component={IndividualTrainer}
         />
-        <Route path="/register-instituter"
+        <Route path="/register-institute"
           exact={true}
           component={InstituteTrainer}
         />
-        <Route path="/detail-trainer"
+        <Route path="/register-trainer-details"
           exact={true}
           component={DetailTrainer} />
-        <Route path="/detail-instituter"
+        <Route path="/register-institute-details"
           exact={true}
           component={DetailInstitute} />
       </Switch>

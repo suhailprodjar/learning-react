@@ -7,6 +7,7 @@ import Footer from "./pages/utils_page/Footer";
 import isServer from "./helper/utils/isServer";
 import isMobile from "./helper/utils/isMobile";
 import Notification from "./components/Notification";
+import Learner from './pages/registration/learner/Learner'
 class App extends Component {
 
   componentDidMount = () => {
@@ -27,16 +28,19 @@ class App extends Component {
             <Route path="/"
               exact={true}
               component={HomePage} />
+            <Route path="/learner/course"
+              exact={true}
+              component={Learner} />
             <Route path="/register-trainer"
               exact={true}
               component={HomePage} />
-            <Route path="/detail-trainer"
+            <Route path="/register-trainer-details"
               exact={true}
               component={HomePage} />
-            <Route path="/register-instituter"
+            <Route path="/register-institute"
               exact={true}
               component={HomePage} />
-            <Route path="/detail-instituter"
+            <Route path="/register-institute-details"
               exact={true}
               component={HomePage} />
           </Switch>

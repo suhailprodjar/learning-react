@@ -1,6 +1,7 @@
 {
   "name": "learning-web",
   "version": "0.1.0",
+  "proxy": "https://learning-backend.herokuapp.com/",
   "description": "Front end application for learning-react",
   "engines": {
     "node": "8.15.1"

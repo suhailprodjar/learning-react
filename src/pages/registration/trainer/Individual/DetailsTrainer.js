@@ -6,7 +6,7 @@ import withStorage from '../../../../components/Storage';
 
 class DetailTrainer extends Component {
     componentDidMount() {
-        if (this.props.tutorCode) {
+        if (!this.props.tutorCode) {
             this.props.history.replace('/register-trainer')
         }
     }

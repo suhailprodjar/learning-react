@@ -16,7 +16,7 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
-  &.pdg-1 {
+  .pdg-1 {
     h2 {
       padding: 0 16%;
 
@@ -103,7 +103,7 @@
     }
   }
 
-  &.pdg-3 {
+  .pdg-3 {
     .pdg-modal-content {
       @media ($sm) {
         width: 682px;
@@ -123,7 +123,7 @@
     }
   }
 
-  &.pdg-4 {
+  .pdg-4 {
     .pdg-modal-content {
       @media ($sm) {
         width: 682px;
@@ -148,7 +148,7 @@
     }
   }
 
-  &.pdg-5 {
+  .pdg-5 {
     .pdg-modal-content {
       @media ($sm) {
         width: 600px;

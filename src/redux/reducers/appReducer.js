@@ -9,13 +9,11 @@ export default (state = {}, action) => {
     case 'LEAD_DETAILS': {
       if (payload.type === 'USER') {
         return {
-          ...payload,
-          messageText: `Hi ${payload.name}..! Welcome Back..`
+          ...payload
         }
       } else {
         return {
-          ...payload,
-          messageText: `Hey ${payload.name}..! Thanks for Register`
+          ...payload
         }
       }
     }

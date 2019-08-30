@@ -2,16 +2,16 @@ export default function getUserDetails() {
     const user = JSON.parse(localStorage.getItem('user'));
     const tutor = JSON.parse(localStorage.getItem('tutor'));
     return dispatch => {
-        if (user.userCode) {
+        if (user && user.userCode) {
             dispatch({
                 type: 'LEAD_DETAILS',
                 payload: {
                     type: 'USER',
-                    userCode: user.userCode,
+                    userCode: user.code,
                     name: user.name
                 }
             })
-        } else if (tutor.tutorCode) {
+        } else if (tutor && tutor.code) {
             dispatch({
                 type: 'LEAD_DETAILS',
                 payload: {

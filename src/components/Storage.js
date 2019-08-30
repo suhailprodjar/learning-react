@@ -39,7 +39,7 @@ const withStorage = WrappedComponent => {
          */
         setToStorage = (key, data) => {
             if (this.state.localStorageAvailable) {
-                localStorage.setItem(key, data);
+                localStorage.setItem(key, JSON.stringify(data));
             }
         };
 

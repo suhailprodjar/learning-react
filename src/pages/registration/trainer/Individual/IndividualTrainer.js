@@ -7,11 +7,11 @@ import { checkMandatoryFields } from '../../../../helper/utils/validation';
 import withStorage from '../../../../components/Storage';
 class IndividualTrainer extends Component {
     state = {
-        name : '',
+        name: '',
         email: '',
         countryCode: "+91",
-        mobileNumber:'', 
-        gender:'Male',
+        mobileNumber: '',
+        gender: 'Male',
         courses: [],
         location: '',
         isInstitute: false,
@@ -25,9 +25,10 @@ class IndividualTrainer extends Component {
     }
 
     closeModal = (path = '/') => {
+        const { history } = this.props;
         document.getElementsByTagName('body')[0].classList.remove('show-modal')
         setTimeout(() => {
-            this.props.history.replace(path);
+            history.push(path);
         }, 200)
     }
 
@@ -40,7 +41,7 @@ class IndividualTrainer extends Component {
             })
         } else {
             if (this.state.hasError) {
-                const validation = checkMandatoryFields({...this.state, [name]: value});
+                const validation = checkMandatoryFields({ ...this.state, [name]: value });
                 this.setState({ [name]: value, ...validation });
             } else {
                 this.setState({ [name]: value });
@@ -49,19 +50,19 @@ class IndividualTrainer extends Component {
     }
     onSubmit = (e) => {
         e && e.preventDefault();
-        const { name, isInstitute }= this.state;
+        const { name, isInstitute } = this.state;
         const validation = checkMandatoryFields(this.state);
         if (!validation.hasError) {
             this.setState({
                 isLoading: true
-            }, () => {                
+            }, () => {
                 this.props.triggerTutorRegister(this.state).then(({ code }) => {
                     this.props.setToStorage('tutor', {
                         code,
                         name,
                         isInstitute
-                    })
-                    this.closeModal('/detail-trainer')
+                    });
+                    this.closeModal('/register-trainer-details')
                 });
             })
         } else {
@@ -84,7 +85,7 @@ class IndividualTrainer extends Component {
                 <div className="rg-modal-content">
                     <div className="rg-modal-header">
                         <i />
-                        <span className="close-rg-modal" onClick={this.closeModal}>Close</span>
+                        <span className="close-rg-modal" onClick={() => this.closeModal()}>Close</span>
                     </div>
                     <div className="rg-modal-body">
                         <div className="modal-img-outer">
