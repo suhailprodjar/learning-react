@@ -1,6 +1,6 @@
 import React from 'react';
-import AboutUS from './abouts';
-import OurGoal from './ourgoal';
+import AboutUS from './AboutUS';
+import OurGoal from './OurGoals';
 
 function Quality() {
     return (

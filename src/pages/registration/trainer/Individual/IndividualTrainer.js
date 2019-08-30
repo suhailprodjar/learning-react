@@ -14,7 +14,8 @@ class IndividualTrainer extends Component {
         courses: [],
         location: '',
         isInstitute: false,
-        instituteName: ''
+        instituteName: '',
+        isLoading: false
     }
     componentDidMount() {
         setTimeout(() => {
@@ -22,10 +23,10 @@ class IndividualTrainer extends Component {
         }, 200)
     }
 
-    closeModal = () => {
+    closeModal = (path = '/') => {
         document.getElementsByTagName('body')[0].classList.remove('show-modal')
         setTimeout(() => {
-            this.props.history.replace('/');
+            this.props.history.replace(path);
         }, 200)
     }
 
@@ -49,7 +50,13 @@ class IndividualTrainer extends Component {
         e && e.preventDefault();
         const validation = checkMandatoryFields(this.state);
         if (!validation.hasError) {
-            this.props.triggerTutorRegister(this.state);
+            this.setState({
+                isLoading: true
+            }, () => {                
+                this.props.triggerTutorRegister(this.state).then(() => {
+                    this.closeModal('/')
+                });
+            })
         } else {
             this.setState(validation)
         }
@@ -139,7 +146,7 @@ class IndividualTrainer extends Component {
                                 </div>
                                 <p className={`${hasError ? 'has-error' : 'd-none'}`}>{`*Highlighted Fields are mandatory`}</p>
                                 <div class="text-right" onClick={this.onSubmit}>
-                                    <button className="btn">Create Profile</button>
+                                    <button type='submit' className="btn">Create Profile</button>
                                 </div>
                             </form>
                         </div>

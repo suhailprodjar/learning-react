@@ -1,5 +1,5 @@
 import React from 'react';
-import isMobile from '../helper/utils/isMobile';
+import isMobile from '../../helper/utils/isMobile';
 
 function Footer() {
     return (

@@ -20,6 +20,7 @@ export default function triggerTutorRegister(requestData) {
                                 status: 'REGISTER_SUCCEED'
                             }
                         });
+                        res('Promised resolved from fetch');
                     }
                     res('Promised resolved from fetch');
                 },

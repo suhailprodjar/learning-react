@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundry";
-import Home from './pages/home';
+import HomePage from './pages/home/Home';
 import './index.scss'
-import Footer from "./pages/footer";
+import Footer from "./pages/utils_page/Footer";
 import isServer from "./helper/utils/isServer";
 import isMobile from "./helper/utils/isMobile";
 import Notification from "./components/Notification";
@@ -26,10 +26,19 @@ class App extends Component {
           <Switch>
             <Route path="/"
               exact={true}
-              component={Home} />
+              component={HomePage} />
             <Route path="/register-trainer"
               exact={true}
-              component={Home} />
+              component={HomePage} />
+            <Route path="/detail-trainer"
+              exact={true}
+              component={HomePage} />
+            <Route path="/register-instituter"
+              exact={true}
+              component={HomePage} />
+            <Route path="/detail-instituter"
+              exact={true}
+              component={HomePage} />
           </Switch>
         </ErrorBoundary>
         <Footer />
