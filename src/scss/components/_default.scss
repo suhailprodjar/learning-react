@@ -99,6 +99,9 @@ $spacer: 8px;
 .mb-24 {
   margin-bottom: floor($spacer * 3);
 }
+.mb-32 {
+  margin-bottom: floor($spacer * 4);
+}
 
 .vertical-center {
   display: -ms-flexbox;
