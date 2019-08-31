@@ -10,13 +10,11 @@ function Notification({
         }, 5000)
     }
     return (
-        <div className={`alert-info blue ${messageText ? 'show' : ''}`}>
-            <p>
-                <i className="pyt-tickmark-16"></i>
-                <span>Info</span>
-                {messageText}
-            </p>
-            <i className=" pyt-close-16"></i>
+        <div className={`notification-bar ${messageText ? 'in' : ''}`}>
+            <div className="notification-content">
+                <p>{messageText}</p>
+                <button className="btn">Close</button>
+            </div>
         </div>
     )
 }
