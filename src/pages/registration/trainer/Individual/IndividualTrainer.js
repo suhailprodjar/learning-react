@@ -84,7 +84,7 @@ class IndividualTrainer extends Component {
         } = this.state;
         return (
             <div className="register-modal flex-modal">
-                <div className="rg-modal-content">
+                <div className="rg-modal-dialog">
                     <div className="rg-modal-header">
                         <i />
                         <span className="close-rg-modal" onClick={() => this.closeModal()}>Close</span>
