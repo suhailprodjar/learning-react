@@ -1,5 +1,6 @@
 import React from 'react';
-function HomeBanner() {
+import { withLastLocation } from 'react-router-last-location';
+function HomeBanner(props) {
     return (
         <div className="hero-banner">
             <div className="banner-content">
@@ -16,7 +17,11 @@ function HomeBanner() {
                                 <input
                                     name=""
                                     type="text"
-                                    placeholder="Enter categories e.g. Maths, Java, French"
+                                    onClick={(e) => {
+                                        e && e.preventDefault();
+                                        props.history.push('/learner/course')
+                                    }}
+                                    placeholder="Enter categories e.g. React, Java, French, Dance"
                                 />
                                 <i className="pyt-search-16"></i>
                             </div>
@@ -34,4 +39,4 @@ function HomeBanner() {
     )
 }
 
-export default HomeBanner;
+export default withLastLocation(HomeBanner);

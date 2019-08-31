@@ -6,7 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 function CourseType(props) {
-    const [{ course = '', location, courseTypes = [] }, dispatch] = useContext(PDGContext);
+    const [{ course = '', location, mode = [] }, dispatch] = useContext(PDGContext);
     useEffect(() => {
         if (!course) {
             props.history.push('/learner/course')
@@ -21,17 +21,17 @@ function CourseType(props) {
         dispatch({
             type: 'SELECT_COURSE_TYPE',
             payload: {
-                courseTypes: typesOfInterest
+                mode: typesOfInterest
             }
         });
         props.setToSession('learner-pdg', {
             course: course,
             location: location,
-            courseTypes: typesOfInterest
+            mode: typesOfInterest
         });
         props.history.replace('register', {
             course,
-            courseTypes : typesOfInterest,
+            mode : typesOfInterest,
             location
         });
     }

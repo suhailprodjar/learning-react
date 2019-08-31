@@ -8,7 +8,7 @@ import searchCourse from '../learner-helper/searchCourse';
 
 
 function Course(props) {
-    const [{ courseItems = [], course, location, courseTypes = [] }, dispatch] = useContext(PDGContext);
+    const [{ courseItems = [], course, location, mode = [] }, dispatch] = useContext(PDGContext);
     const [searchValue, setValue] = useState('');
    
     const onSubmit = (value) => {
@@ -22,7 +22,7 @@ function Course(props) {
         props.setToSession('learner-pdg', {
             course: value,
             location: location,
-            courseTypes: courseTypes
+            mode: mode
         });
         props.history.replace('course/type');
     }
@@ -39,18 +39,17 @@ function Course(props) {
             });
         });
     }
-    const onClickAction = (e) => {
-        e && e.preventDefault();
+    const onClickAction = (value) => {
         dispatch({
             type: 'SELECT_COURSE',
             payload: {
-                course: e.target.value
+                course: value
             }
         });
         props.setToSession('learner-pdg', {
-            course: e.target.value,
+            course: value,
             location: location,
-            courseTypes: courseTypes
+            mode: mode
         });
         props.history.replace('course/type');
     }
@@ -60,7 +59,7 @@ function Course(props) {
                 <Header />
                 <div className="pdg-modal-body">
                     <h2>Find Tutors, Trainers &amp; Institutes near you.</h2>
-                    <div className="clearfix search-form">
+                    <div className="clearfix search-form in">
                         <div className="form-group">
                             <input type="text" name=""
                                 onChange={onChangeAction}
@@ -77,14 +76,14 @@ function Course(props) {
                             {
                                 courseItems.map((items, index) => {
                                     return (
-                                        <li key={index} value={items.course} onClick={onClickAction}>{items.course}</li>
+                                        <li key={index} value={items.course} onClick={() => onClickAction(items.course)}>{items.course}</li>
                                     )
                                 })
                             }
                         </ul>
                     </div>
                 </div>
-                <Footer onPrev={null} onNext={courseTypes.length ? () => {
+                <Footer onPrev={null} onNext={mode.length ? () => {
                     props.history.replace('course/type')
                 } : null} />
             </div>
