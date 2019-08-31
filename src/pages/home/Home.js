@@ -15,7 +15,6 @@ import getUserDetails from "../../redux/actions/getUserDetails";
 import AboutUS from "./AboutUS";
 import OurGoal from "./OurGoals";
 import { removeClass } from "../../helper/utils/removeClass";
-import { removeClass } from "../../helper/utils/removeClass";
 function HomePage(props) {
   useEffect(() => {
     removeClass('TAG', 'body', 'show-modal');
