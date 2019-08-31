@@ -5,7 +5,6 @@ import HowToWorks from "./OurWorks";
 import Quality from "./OurQuality";
 import Testimonials from "./Reviews";
 import Header from './Helmet';
-import Navbar from "../utils_page/Navbar";
 import IndividualTrainer from "../registration/trainer/Individual/IndividualTrainer";
 import InstituteTrainer from "../registration/trainer/Institute/InstituteTrainer";
 import DetailTrainer from "../registration/trainer/Individual/DetailsTrainer";
@@ -13,6 +12,8 @@ import DetailInstitute from "../registration/trainer/Institute/DetailInstitute";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import getUserDetails from "../../redux/actions/getUserDetails";
+import AboutUS from "./AboutUS";
+import OurGoal from "./OurGoals";
 function HomePage(props) {
   useEffect(() => {
     if (!props.tutorCode) {
@@ -22,10 +23,11 @@ function HomePage(props) {
   return (
     <div className="home">
       <Header />
-      <Navbar />
       <HomeBanner />
       <HowToWorks />
       <Quality />
+      <AboutUS />
+      <OurGoal />
       <Testimonials />
       <Switch>
         <Route path="/register-trainer"

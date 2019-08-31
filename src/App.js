@@ -8,6 +8,7 @@ import isServer from "./helper/utils/isServer";
 import isMobile from "./helper/utils/isMobile";
 import Notification from "./components/Notification";
 import Learner from './pages/registration/learner/Learner'
+import Navbar from "./pages/utils_page/Navbar";
 class App extends Component {
 
   componentDidMount = () => {
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className={'content-wrap'}>
+        <Navbar />
         <ErrorBoundary>
           <Switch>
             <Route path="/"

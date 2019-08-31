@@ -465,8 +465,9 @@
   }
 
   .about-us {
+    margin-bottom: 72px;
+
     @media ($sm) {
-      margin: 40px 0 72px;
       position: relative;
       margin-bottom: 220px;
     }

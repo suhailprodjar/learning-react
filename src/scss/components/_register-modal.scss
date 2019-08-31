@@ -17,33 +17,35 @@
   transform-style: preserve-3d;
 
   &.flex-modal {
-    .rg-modal-content {
+    .rg-modal-dialog {
       .rg-modal-body {
-        @media ($sm) {
-          display: flex;
-        }
-
-        .modal-img-outer .modal-img {
-          height: 100%;
+        .inner-content {
+          overflow: hidden;
+          @media ($sm) {
+            display: flex;
+          }
+  
+          .modal-img-outer .modal-img {
+            height: 100%;
+          }
         }
       }
     }
   }
 
   &.img-right {
-    .rg-modal-content {
+    .rg-modal-dialog {
       .rg-modal-body {
-        .modal-img-outer {
-          @media ($sm) {
-            float: right;
-            padding-left: 8px;
-          }
-          .modal-img {
+        .inner-content {
+          .modal-img-outer {
             @media ($sm) {
-              height: 400px;
+              float: right;
+              padding-left: 8px;
             }
-            @media ($md) {
-              height: 640px;
+            .modal-img {
+              @media ($sm) {
+                height: 480px;
+              }
             }
           }
         }
@@ -51,7 +53,7 @@
     }
   }
 
-  .rg-modal-content {
+  .rg-modal-dialog {
     margin: 40px 16px;
     @media ($sm) {
       margin: 40px auto;
@@ -92,290 +94,299 @@
       }
     }
     .rg-modal-body {
-      width: 100%;
-      display: inline-block;
+      height: calc(100vh - 120px);
+      overflow: hidden;
+      overflow-y: scroll;
 
-      .modal-img-outer {
-        @media ($xs) {
-          height: 218px;
-        }
-        @media ($sm) {
-          width: 40%;
-          float: left;
-        }
-
-        .modal-img {
-          background-color: #fedfb6;
-          background-image: url("https://i.imgur.com/cOlQpx7.png");
-          background-repeat: no-repeat;
-          background-size: 80%;
-          background-position: center bottom;
-          width: 100%;
-          height: 100%;
-          display: inline-block;
-
-          @media ($sm) {
-            background-image: url("https://i.imgur.com/pVItSUK.png");
-            background-size: contain;
-            height: 640px;
-          }
-        }
+      @media($sm){
+        height: calc(100vh - 144px);
       }
 
-      .rg-modal-form {
-        padding: 32px 16px;
-        background: #ffffff;
+      .inner-content {
+        width: 100%;        
 
-        @media ($sm) {
-          width: 60%;
-          float: left;
-          padding: 48px 40px;
-        }
-
-        p {
-          font-weight: 600;
-          font-size: 15px;
-          line-height: 22px;
-          margin-bottom: 16px;
-
-          &.heading-txt {
-            font-size: 20px;
-            line-height: 30px;
-            font-weight: 700;
-
-            @media ($md) {
-              margin-bottom: 32px;
-            }
-            @media ($md) {
-              font-size: 24px;
-              line-height: 36px;
-            }
+        .modal-img-outer {
+          @media ($xs) {
+            height: 218px;
           }
-
-          &.has-error {
-            font-size: 10px;
-            color: #f44336;
-            font-weight: normal;
-            line-height: 0px;
-            margin-bottom: 0px;
+          @media ($sm) {
+            width: 40%;
+            float: left;
           }
-        }
-
-        .form-group {
-          &.has-error {
-            .control-select select, input {
-              border-color: #f44336;
-            }
-          }
-          &.has-success {
-            .control-select select, input {
-              border-color: #1cad45;
-            }
-          }
-
-          label {
-            &.control-label {
-              font-weight: 600;
-              font-size: 15px;
-              line-height: 22px;
-              color: #767676;
-            }
-            &.control-option {
-              position: relative;
-              padding-left: 32px;
-              @media($md) {
-                margin-right: 16px;
-              }
-
-              input {
-                display: none;
-
-                &:checked ~ i.tick-icon:before {
-                  content: '\e910';
-                  background: #201928;
-                  font-family: 'pyticon';
-                  color: #FFF;
-                }
-
-                &:checked ~ i.radio-icon:before {
-                  content: '\e927';
-                  font-family: 'pyticon';
-                  color: #1F1827;
-                }
-              }
-              span {
-                font-weight: 600;
-                font-size: 13px;
-                line-height: 19px;
-              }
-              i {
-                position: absolute;
-                left: 4px;
-                line-height: 1;
-
-                &:before{
-                  font-family: 'pyticon';
-                  font-style: normal;
-                  font-size: 16px;
-                  line-height: 16px;
-                  display: inline-block;
-                  text-align: center;
-                }
-
-                &.radio-icon {
-                  top: 2px;
-
-                  &:before{
-                    content: '\e93b';
-                  }
-                }
-
-                &.tick-icon {
-                  top: 2px;
-
-                  &:before{
-                    content: '';
-                    height: 16px;
-                    width: 16px;
-                    border-radius: 100%;
-                    font-size: 14px;
-                    display: inline-block;
-                    background: #aaaaaa;
-                  }
-                }
-
-              }
-            }
-          }
-
-          select,
-          input {
+  
+          .modal-img {
+            background-color: #fedfb6;
+            background-image: url("https://i.imgur.com/cOlQpx7.png");
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position: center top;
             width: 100%;
-            border: 1px solid rgba(32, 25, 40, 0.2);
-            outline: 0;
-            font-size: 13px;
-            line-height: 19px;
-            color: #1f1827;
-            height: 40px;
-            padding: 10px 8px;
-
-            @media ($md) {
-              height: 48px;
-            }
-
-            &::placeholder {
-              color: rgba(32, 25, 40, 0.5);
+            height: 100%;
+            display: inline-block;
+  
+            @media ($sm) {
+              background-image: url("https://i.imgur.com/pVItSUK.png");
+              background-size: contain;
+              background-position: center bottom;
+              height: 640px;
             }
           }
-
-          .has-error {
-            border: 1px solid #f44336
+        }
+  
+        .rg-modal-form {
+          padding: 32px 16px;
+          background: #ffffff;
+  
+          @media ($sm) {
+            width: 60%;
+            float: left;
+            padding: 48px 40px;
           }
-
-          &.mbl-no {
-            position: relative;
-
-            input {
-              padding-left: 48px;
-
+  
+          p {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 16px;
+  
+            &.heading-txt {
+              font-size: 20px;
+              line-height: 30px;
+              font-weight: 700;
+  
               @media ($md) {
-                padding-left: 56px;
+                margin-bottom: 32px;
+              }
+              @media ($md) {
+                font-size: 24px;
+                line-height: 36px;
               }
             }
-
-            span {
-              position: absolute;
-              top: 0;
-              left: 0;
-              padding: 8px 10px;
-              border-right: 1px solid rgba(0, 0, 0, 0.2);
+  
+            .error {
+              color: #ff403b;
+              font-style: normal;
+              vertical-align: top;
+            }
+          }
+  
+          .form-group {
+            &.has-error {
+              .control-select select, input {
+                border-color: #f44336;
+              }
+            }
+            &.has-success {
+              .control-select select, input {
+                border-color: #1cad45;
+              }
+            }
+  
+            label {
+              &.control-label {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 22px;
+                color: #767676;
+              }
+              &.control-option {
+                position: relative;
+                padding-left: 32px;
+                @media($sm) {
+                  margin-right: 16px;
+                }
+  
+                input {
+                  display: none;
+  
+                  &:checked ~ i.tick-icon:before {
+                    content: '\e910';
+                    background: #201928;
+                    font-family: 'pyticon';
+                    color: #FFF;
+                  }
+  
+                  &:checked ~ i.radio-icon:before {
+                    content: '\e927';
+                    font-family: 'pyticon';
+                    color: #1F1827;
+                  }
+                }
+                span {
+                  font-weight: 600;
+                  font-size: 13px;
+                  line-height: 19px;
+                }
+                i {
+                  position: absolute;
+                  left: 0;
+                  line-height: 1;
+  
+                  &:before{
+                    font-family: 'pyticon';
+                    font-style: normal;
+                    font-size: 16px;
+                    line-height: 16px;
+                    display: inline-block;
+                    text-align: center;
+                  }
+  
+                  &.radio-icon {
+                    top: 2px;
+  
+                    &:before{
+                      content: '\e93b';
+                    }
+                  }
+  
+                  &.tick-icon {
+                    top: 3px;
+  
+                    &:before{
+                      content: '';
+                      height: 16px;
+                      width: 16px;
+                      border-radius: 100%;
+                      font-size: 14px;
+                      display: inline-block;
+                      background: #aaaaaa;
+                    }
+                  }
+  
+                }
+              }
+            }
+  
+            select,
+            input {
+              width: 100%;
+              border: 1px solid rgba(32, 25, 40, 0.2);
+              outline: 0;
               font-size: 13px;
-              line-height: 22px;
-              color: #201928;
+              line-height: 19px;
+              color: #1f1827;
               height: 40px;
-
+              padding: 10px 8px;
+  
               @media ($md) {
                 height: 48px;
-                line-height: 2.4;
-                padding: 8px 14px;
               }
-            }
-          }
-
-          .control-select {
-            position: relative;
-
-            &:after {
-              content: '\e957';
-              font-family: 'pyticon';
-              position: absolute;
-              right: 8px;
-              top: 50%;
-              margin-top: -8px;
-              line-height: 1;
-              font-size: 16px;
-              color: #1F1827;
-              pointer-events: none;
-            }
-
-            select {
-              -webkit-appearance: none;
-              -moz-appearance: none;
-              -ms-appearance: none;
-              appearance: none;
-              border: 1px solid rgba(32, 25, 40, 0.2);
-              background: transparent;
-              border-radius: 0;
-              color: #1f1827;
-
-              &:invalid , option:first-child{
+  
+              &::placeholder {
                 color: rgba(32, 25, 40, 0.5);
               }
             }
-          }
-        }
-
-        button {
-          background: #1f1827;
-          font-weight: bold;
-          font-size: 13px;
-          line-height: 22px;
-          text-align: center;
-          color: #ffffff;
-          border-radius: 0;
-          padding: 8px 12px;
-          margin-top: 8px;
-
-          @media ($md) {
-            padding: 10px 16px;
-          }
-        }
-
-        .ftr-text {
-          text-align: center;
-          margin-top: 16px;
-
-          p {
-            font-size: 8px;
-            line-height: 12px;
-
-            @media ($md) {
-              font-size: 12px;
-              line-height: 16px;
+  
+            .has-error {
+              border: 1px solid #f44336
             }
-
-            &.txt {
-              font-size: 10px;
-              line-height: 15px;
-
+  
+            &.mbl-no {
+              position: relative;
+  
+              input {
+                padding-left: 48px;
+  
+                @media ($md) {
+                  padding-left: 56px;
+                }
+              }
+  
+              span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 8px 10px;
+                border-right: 1px solid rgba(0, 0, 0, 0.2);
+                font-size: 13px;
+                line-height: 22px;
+                color: #201928;
+                height: 40px;
+  
+                @media ($md) {
+                  height: 48px;
+                  line-height: 2.4;
+                  padding: 8px 14px;
+                }
+              }
+            }
+  
+            .control-select {
+              position: relative;
+  
+              &:after {
+                content: '\e957';
+                font-family: 'pyticon';
+                position: absolute;
+                right: 8px;
+                top: 50%;
+                margin-top: -8px;
+                line-height: 1;
+                font-size: 16px;
+                color: #1F1827;
+                pointer-events: none;
+              }
+  
+              select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                border: 1px solid rgba(32, 25, 40, 0.2);
+                background: transparent;
+                border-radius: 0;
+                color: #1f1827;
+  
+                &:invalid , option:first-child{
+                  color: rgba(32, 25, 40, 0.5);
+                }
+              }
+            }
+          }
+  
+          button {
+            background: #1f1827;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 22px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 0;
+            padding: 8px 12px;
+            margin-top: 8px;
+  
+            @media ($md) {
+              padding: 10px 16px;
+            }
+          }
+  
+          .ftr-text {
+            text-align: center;
+            margin-top: 16px;
+  
+            p {
+              font-size: 8px;
+              line-height: 12px;
+  
               @media ($md) {
                 font-size: 12px;
                 line-height: 16px;
               }
+  
+              &.txt {
+                font-size: 10px;
+                line-height: 15px;
+  
+                @media ($md) {
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
             }
           }
         }
       }
+
     }
   }
 }

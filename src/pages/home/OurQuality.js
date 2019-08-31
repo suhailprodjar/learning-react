@@ -1,91 +1,22 @@
 import React from 'react';
 import AboutUS from './AboutUS';
 import OurGoal from './OurGoals';
+import isMobile from '../../helper/utils/isMobile';
 
 function Quality() {
     return (
         <div class="quality-courses">
-            <div className="quality-courses-inner">
-                <div className="container">
-                    <h3 className="heading-txt">
-                        Qulity courses instructed by the <br />Experienced
-                        Professionals.
+            <div className="container">
+                <h3 className="heading-txt">
+                    Qulity courses instructed by the <br />Experienced
+                    Professionals.
                 </h3>
-                    <p className="heading-txt">
-                        Browse through all the courses right from designing to
-                        devlopment and marketing, content writing etc.
+                <p className="heading-txt">
+                    Browse through all the courses right from designing to
+                    devlopment and marketing, content writing etc.
                 </p>
-                    <div className="d-none d-sm-block">
-                        <div className="row">
-                            <div className="col-12 col-sm-4">
-                                <div className="card-wrap">
-                                    <i className="pyt-badge-24"></i>
-                                    <p>
-                                        <span>Enterprise Software Development</span>
-                                        Create complex enterprise software, ensure reliable
-                                        software integration, modernise your legacy system.
-                                </p>
-                                    <a href="/">Explore More</a>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-4">
-                                <div className="card-wrap">
-                                    <i className="pyt-badge-24"></i>
-                                    <p>
-                                        <span>Enterprise Software Development</span>
-                                        Create complex enterprise software, ensure reliable
-                                        software integration, modernise your legacy system.
-                            </p>
-                                    <a href="/">Explore More</a>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-4">
-                                <div className="card-wrap">
-                                    <i className="pyt-badge-24"></i>
-                                    <p>
-                                        <span>Enterprise Software Development</span>
-                                        Create complex enterprise software, ensure reliable
-                                        software integration, modernise your legacy system.
-                        </p>
-                                    <a href="/">Explore More</a>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-4">
-                                <div className="card-wrap">
-                                    <i className="pyt-badge-24"></i>
-                                    <p>
-                                        <span>Enterprise Software Development</span>
-                                        Create complex enterprise software, ensure reliable
-                                        software integration, modernise your legacy system.
-                        </p>
-                                    <a href="/">Explore More</a>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-4">
-                                <div className="card-wrap">
-                                    <i className="pyt-badge-24"></i>
-                                    <p>
-                                        <span>Enterprise Software Development</span>
-                                        Create complex enterprise software, ensure reliable
-                                        software integration, modernise your legacy system.
-                        </p>
-                                    <a href="/">Explore More</a>
-                                </div>
-                            </div>
-                            <div className="col-12 col-sm-4">
-                                <div className="card-wrap">
-                                    <i className="pyt-badge-24"></i>
-                                    <p>
-                                        <span>Enterprise Software Development</span>
-                                        Create complex enterprise software, ensure reliable
-                                        software integration, modernise your legacy system.
-                        </p>
-                                    <a href="/">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quality-accordian d-block d-sm-none" id="accordion">
+                {isMobile() ?
+                    <div class="quality-accordian" id="accordion">
                         <div class="card">
                             <div class="card-header">
                                 <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false">
@@ -159,10 +90,77 @@ function Quality() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <AboutUS />
-                <OurGoal />
-            </div >
+                    : 
+                    <div className="row">
+                        <div className="col-12 col-sm-4">
+                            <div className="card-wrap">
+                                <i className="pyt-badge-24"></i>
+                                <p>
+                                    <span>Enterprise Software Development</span>
+                                    Create complex enterprise software, ensure reliable
+                                    software integration, modernise your legacy system.
+                            </p>
+                                <a href="/">Explore More</a>
+                            </div>
+                        </div>
+                        <div className="col-12 col-sm-4">
+                            <div className="card-wrap">
+                                <i className="pyt-badge-24"></i>
+                                <p>
+                                    <span>Enterprise Software Development</span>
+                                    Create complex enterprise software, ensure reliable
+                                    software integration, modernise your legacy system.
+                        </p>
+                                <a href="/">Explore More</a>
+                            </div>
+                        </div>
+                        <div className="col-12 col-sm-4">
+                            <div className="card-wrap">
+                                <i className="pyt-badge-24"></i>
+                                <p>
+                                    <span>Enterprise Software Development</span>
+                                    Create complex enterprise software, ensure reliable
+                                    software integration, modernise your legacy system.
+                    </p>
+                                <a href="/">Explore More</a>
+                            </div>
+                        </div>
+                        <div className="col-12 col-sm-4">
+                            <div className="card-wrap">
+                                <i className="pyt-badge-24"></i>
+                                <p>
+                                    <span>Enterprise Software Development</span>
+                                    Create complex enterprise software, ensure reliable
+                                    software integration, modernise your legacy system.
+                    </p>
+                                <a href="/">Explore More</a>
+                            </div>
+                        </div>
+                        <div className="col-12 col-sm-4">
+                            <div className="card-wrap">
+                                <i className="pyt-badge-24"></i>
+                                <p>
+                                    <span>Enterprise Software Development</span>
+                                    Create complex enterprise software, ensure reliable
+                                    software integration, modernise your legacy system.
+                    </p>
+                                <a href="/">Explore More</a>
+                            </div>
+                        </div>
+                        <div className="col-12 col-sm-4">
+                            <div className="card-wrap">
+                                <i className="pyt-badge-24"></i>
+                                <p>
+                                    <span>Enterprise Software Development</span>
+                                    Create complex enterprise software, ensure reliable
+                                    software integration, modernise your legacy system.
+                    </p>
+                                <a href="/">Explore More</a>
+                            </div>
+                        </div>
+                    </div>
+                }    
+            </div>
         </div>
     )
 }

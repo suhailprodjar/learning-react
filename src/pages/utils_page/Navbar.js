@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { withLastLocation } from 'react-router-last-location';
+import isMobile from '../../helper/utils/isMobile';
 
 const triggerButtonAction = (history, path) => {
     history.replace(path);
@@ -27,7 +28,7 @@ function NavBar(props) {
                     <div className="col-12 col-sm-7">
                         <a href="/" className="logo">LearnGrow</a>
                     </div>
-                    <div className="col-12 col-sm-5 is_mobile text-right">
+                    <div className={`col-12 col-sm-5 ${isMobile() ? 'text-center' : 'text-right'}`}>
                         <button className="btn active"
                             onClick={() => triggerButtonAction(history, '/learner/course')}>
                             Student Register
