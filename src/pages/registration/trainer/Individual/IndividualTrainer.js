@@ -90,75 +90,77 @@ class IndividualTrainer extends Component {
                         <span className="close-rg-modal" onClick={() => this.closeModal()}>Close</span>
                     </div>
                     <div className="rg-modal-body">
-                        <div className="modal-img-outer">
-                            <span className="modal-img"></span>
-                        </div>
-                        <div className="rg-modal-form">
-                            <p className="heading-txt">Sign up as a tutor</p>
-                            <form>
-                                <div className="form-group">
-                                    <input
-                                        className={`${hasError && nameError ? 'has-error' : ''}`}
-                                        type="text"
-                                        placeholder="Enter your Full name Eg: xxx"
-                                        name="name"
-                                        value={name}
-                                        onChange={this.onChangeAction}
-                                        required
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        className={`${hasError && emailError ? 'has-error' : ''}`}
-                                        type="email"
-                                        placeholder="Enter your mail id Eg: xxx@xxx.com"
-                                        name="email"
-                                        value={email}
-                                        onChange={this.onChangeAction}
-                                        required
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="mobileNumber"
-                                        className={`${hasError && mobileError ? 'has-error' : ''}`}
-                                        placeholder="Enter your contact no Eg: +91-9715626138"
-                                        name="mobileNumber"
-                                        value={mobileNumber}
-                                        pattern="+[0-9]{2}-[0-9]{10}"
-                                        onChange={this.onChangeAction}
-                                        required
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <select name={'gender'} onChange={this.onChangeAction}>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        placeholder="Enter your category you teach Eg: React, Angular, ..."
-                                        name="courses"
-                                        onChange={this.onChangeAction}
-                                    />
-                                </div>
-                                <div className="form-group">
-                                    <input
-                                        type="text"
-                                        placeholder="Enter your address"
-                                        name="location"
-                                        value={location}
-                                        onChange={this.onChangeAction}
-                                    />
-                                </div>
-                                <p className={`${hasError ? 'has-error' : 'd-none'}`}>{`*Highlighted Fields are mandatory`}</p>
-                                <div class="text-right" onClick={this.onSubmit}>
-                                    <button type='submit' className="btn">Create Profile</button>
-                                </div>
-                            </form>
+                        <div class="inner-content">
+                            <div className="modal-img-outer">
+                                <span className="modal-img"></span>
+                            </div>
+                            <div className="rg-modal-form">
+                                <p className="heading-txt">Sign up as a tutor</p>
+                                <form>
+                                    <div className="form-group">
+                                        <input
+                                            className={`${hasError && nameError ? 'has-error' : ''}`}
+                                            type="text"
+                                            placeholder="Enter your Full name Eg: xxx"
+                                            name="name"
+                                            value={name}
+                                            onChange={this.onChangeAction}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <input
+                                            className={`${hasError && emailError ? 'has-error' : ''}`}
+                                            type="email"
+                                            placeholder="Enter your mail id Eg: xxx@xxx.com"
+                                            name="email"
+                                            value={email}
+                                            onChange={this.onChangeAction}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <input
+                                            type="mobileNumber"
+                                            className={`${hasError && mobileError ? 'has-error' : ''}`}
+                                            placeholder="Enter your contact no Eg: +91-9715626138"
+                                            name="mobileNumber"
+                                            value={mobileNumber}
+                                            pattern="+[0-9]{2}-[0-9]{10}"
+                                            onChange={this.onChangeAction}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <select name={'gender'} onChange={this.onChangeAction}>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div className="form-group">
+                                        <input
+                                            type="text"
+                                            placeholder="Enter your category you teach Eg: React, Angular, ..."
+                                            name="courses"
+                                            onChange={this.onChangeAction}
+                                        />
+                                    </div>
+                                    <div className="form-group">
+                                        <input
+                                            type="text"
+                                            placeholder="Enter your address"
+                                            name="location"
+                                            value={location}
+                                            onChange={this.onChangeAction}
+                                        />
+                                    </div>
+                                    <p className={`${hasError ? 'has-error' : 'd-none'}`}>{`*Highlighted Fields are mandatory`}</p>
+                                    <div class="text-right" onClick={this.onSubmit}>
+                                        <button type='submit' className="btn">Create Profile</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

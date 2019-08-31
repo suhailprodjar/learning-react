@@ -164,9 +164,18 @@
             }
   
             .error {
-              color: #ff403b;
               font-style: normal;
               vertical-align: top;
+            }
+
+            .error, &.has-error {
+              color: #ff403b;
+            }
+
+            &.has-error {
+              font-size: 13px;
+              line-height: 19px;
+              font-weight: 500;
             }
           }
   
@@ -357,6 +366,10 @@
   
             @media ($md) {
               padding: 10px 16px;
+            }
+
+            &:focus {
+              box-shadow: none;
             }
           }
   
