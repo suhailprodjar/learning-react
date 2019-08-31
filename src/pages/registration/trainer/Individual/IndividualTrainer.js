@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import triggerTutorRegister from '../../../../redux/actions/triggerTutorRegister';
 import { checkMandatoryFields } from '../../../../helper/utils/validation';
 import withStorage from '../../../../components/Storage';
+import { addClass } from '../../../../helper/utils/addClass';
+import { removeClass } from '../../../../helper/utils/removeClass';
 class IndividualTrainer extends Component {
     state = {
         name: '',
@@ -20,13 +22,13 @@ class IndividualTrainer extends Component {
     }
     componentDidMount() {
         setTimeout(() => {
-            document.getElementsByTagName('body')[0].classList.add('show-modal')
+            addClass('TAG', 'body', 'show-modal');
         }, 200)
     }
 
     closeModal = (path = '/') => {
         const { history } = this.props;
-        document.getElementsByTagName('body')[0].classList.remove('show-modal')
+        removeClass('TAG', 'body', 'show-modal');
         setTimeout(() => {
             history.push(path);
         }, 200)

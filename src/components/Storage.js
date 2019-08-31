@@ -43,6 +43,26 @@ const withStorage = WrappedComponent => {
             }
         };
 
+
+        /**
+         * Load the data from session storage
+         */
+        getFromSession = key => {
+            if (this.state.localStorageAvailable) {
+                return JSON.parse(sessionStorage.getItem(key));
+            }
+            return null;
+        };
+
+        /**
+         * Store the data to session storage
+         */
+        setToSession = (key, data) => {
+            if (this.state.localStorageAvailable) {
+                sessionStorage.setItem(key, JSON.stringify(data));
+            }
+        };
+
         /**
          * Remove the data from local storage
          */
@@ -57,6 +77,8 @@ const withStorage = WrappedComponent => {
                 <WrappedComponent
                     getFromStorage={this.getFromStorage}
                     setToStorage={this.setToStorage}
+                    getFromSession={this.getFromSession}
+                    setToSession={this.setToSession}
                     removeFromStorage={this.removeFromStorage}
                     {...this.props}
                 />

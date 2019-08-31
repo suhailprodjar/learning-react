@@ -7,7 +7,7 @@ export default function getUserDetails() {
                 type: 'LEAD_DETAILS',
                 payload: {
                     type: 'USER',
-                    userCode: user.code,
+                    code: user.code,
                     name: user.name
                 }
             })
@@ -16,7 +16,7 @@ export default function getUserDetails() {
                 type: 'LEAD_DETAILS',
                 payload: {
                     type: tutor.isInstitute ? 'INSTITUTOR' : 'TUTOR',
-                    tutorCode: tutor.tutorCode,
+                    code: tutor.tutorCode,
                     name: tutor.name
                 }
             })

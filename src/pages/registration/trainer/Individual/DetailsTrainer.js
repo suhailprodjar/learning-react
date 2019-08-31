@@ -6,7 +6,7 @@ import withStorage from '../../../../components/Storage';
 
 class DetailTrainer extends Component {
     componentDidMount() {
-        if (!this.props.tutorCode) {
+        if (!this.props.code) {
             this.props.history.replace('/register-trainer')
         }
     }
@@ -16,9 +16,9 @@ class DetailTrainer extends Component {
 }
 
 function mapStateToProps({ app = {} }) {
-    const { tutorCode = '', name } = app;
+    const { code = '', name } = app;
     return {
-        tutorCode,
+        code,
         name
     }
 }

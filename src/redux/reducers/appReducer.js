@@ -2,6 +2,7 @@
 export default (state = {}, action) => {
   const { type = '', payload = {} } = action;
   switch (type) {
+    case 'LEARNER_CREATED':
     case 'TUTOR_CREATED':
       return payload;
     case 'NOTIFICATION':

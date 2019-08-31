@@ -12,7 +12,7 @@ class TestimoialCard extends Component {
     componentDidMount() {
         const { testimonials = [] } = this.props;
         const length = testimonials.length - 1;
-        setInterval(() => {
+        this.timer = setInterval(() => {
             const { start, end } = this.state;
             if (end >= length) {
                 this.setState({
@@ -27,12 +27,14 @@ class TestimoialCard extends Component {
             }
         }, 10000)
     }
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    }
     render() {
         const { start, end } = this.state;
         const { testimonials = [] } = this.props;
         const isMob = isMobile();
         return testimonials.map((testimonial, index) => {
-            console.log(start === index || end === index)
             return (
                 <div className={`col-12 col-sm-6`} style={isMob ? { 
                     'display': start !== index ? 'none' : 'block' 

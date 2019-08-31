@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { withLastLocation } from 'react-router-last-location';
 
 const triggerButtonAction = (history, path) => {
-    history.replace(path);
+    history.push(path);
 }
 function NavBar(props) {
     const { history } = props;
