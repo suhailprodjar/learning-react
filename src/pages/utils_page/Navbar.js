@@ -3,7 +3,7 @@ import { withLastLocation } from 'react-router-last-location';
 import isMobile from '../../helper/utils/isMobile';
 
 const triggerButtonAction = (history, path) => {
-    history.replace(path);
+    history.push(path);
 }
 function NavBar(props) {
     const { history } = props;

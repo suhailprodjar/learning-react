@@ -8,6 +8,7 @@ import CourseType from './components/CourseType';
 import Register from './components/Register';
 import Progress from './components/Progress';
 import Helmet from './components/Helmet';
+import { addClass } from '../../../helper/utils/addClass';
 
 const initialData = {
     activeIndex: 1
@@ -19,9 +20,9 @@ const initialData = {
 function Learner() {
     useEffect(() => {
         setTimeout(() => {
-            document.getElementsByTagName('body')[0].classList.add('show-modal')
-            document.getElementsByClassName('bg-overlay')[0].classList.add('pdg-overlay')
-        }, 200)
+            addClass('TAG', 'body', 'show-modal');
+            addClass('CLASS', 'bg-overlay', 'pdg-overlay');
+        }, 100);
     }, []);
     return (
         <PDGContext.Provider value={useReducer(PDGState, initialData)}>
@@ -37,11 +38,11 @@ function Learner() {
                         exact={true}
                         component={Location}
                     />
-                    <Route path="/learner/course/location/type"
+                    <Route path="/learner/course/type"
                         exact={true}
                         component={CourseType}
                     />
-                    <Route path="/learner/register"
+                    <Route path="/learner/course/register"
                         exact={true}
                         component={Register}
                     />

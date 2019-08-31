@@ -16,6 +16,18 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
+  input {
+    &.has-error {
+      border: 1px solid #c5382e !important
+    }
+  }
+
+  p {
+    &.has-error {
+      color: #c5382e !important
+    }
+  }
+
   .pdg-1 {
     h2 {
       padding: 0 16%;

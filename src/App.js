@@ -9,15 +9,16 @@ import isMobile from "./helper/utils/isMobile";
 import Notification from "./components/Notification";
 import Learner from './pages/registration/learner/Learner'
 import Navbar from "./pages/utils_page/Navbar";
+import { removeClass } from "./helper/utils/removeClass";
+import { addClass } from "./helper/utils/addClass";
 class App extends Component {
 
   componentDidMount = () => {
     if (!isServer()) {
-      let element = document.getElementsByClassName('is_hide-hdr')[0];
       if (isMobile()) {
-        element.classList.remove('hide-hdr');
+        removeClass('CLASS', 'is_hide-hdr', 'hide-hdr');
       } else {
-        element.classList.add('hide-hdr');
+        addClass('CLASS', 'is_hide-hdr', 'hide-hdr');
       }
     }
   }
@@ -30,7 +31,7 @@ class App extends Component {
             <Route path="/"
               exact={true}
               component={HomePage} />
-            <Route path="/learner/course"
+            <Route path="/learner/*"
               exact={true}
               component={Learner} />
             <Route path="/register-trainer"

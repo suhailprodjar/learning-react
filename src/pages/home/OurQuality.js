@@ -5,7 +5,7 @@ import isMobile from '../../helper/utils/isMobile';
 
 function Quality() {
     return (
-        <div class="quality-courses">
+        <div className="quality-courses">
             <div className="container">
                 <h3 className="heading-txt">
                     Qulity courses instructed by the <br />Experienced
@@ -23,68 +23,68 @@ function Quality() {
                                     <i class="pyt-badge-24"></i> Enterprise Software Development
                     </a>
                             </div>
-                            <div id="collapseOne" class="collapse" data-parent="#accordion" style={{}}>
-                                <div class="card-body">
+                            <div id="collapseOne" className="collapse" data-parent="#accordion" style={{}}>
+                                <div className="card-body">
                                     Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
                     </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">
-                                    <i class="pyt-badge-24"></i> Mobile App Development
+                        <div className="card">
+                            <div className="card-header">
+                                <a className="card-link collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">
+                                    <i className="pyt-badge-24"></i> Mobile App Development
                     </a>
                             </div>
-                            <div id="collapseTwo" class="collapse" data-parent="#accordion" style={{}}>
-                                <div class="card-body">
+                            <div id="collapseTwo" className="collapse" data-parent="#accordion" style={{}}>
+                                <div className="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                                    <i class="pyt-badge-24"></i> UX / UI Design
+                        <div className="card">
+                            <div className="card-header">
+                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                                    <i className="pyt-badge-24"></i> UX / UI Design
                     </a>
                             </div>
-                            <div id="collapseThree" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
+                            <div id="collapseThree" className="collapse" data-parent="#accordion">
+                                <div className="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-                                    <i class="pyt-badge-24"></i> Mobile App Development
+                        <div className="card">
+                            <div className="card-header">
+                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                                    <i className="pyt-badge-24"></i> Mobile App Development
                     </a>
                             </div>
-                            <div id="collapseFour" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
+                            <div id="collapseFour" className="collapse" data-parent="#accordion">
+                                <div className="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
-                                    <i class="pyt-badge-24"></i> UX / UI Design
+                        <div className="card">
+                            <div className="card-header">
+                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                                    <i className="pyt-badge-24"></i> UX / UI Design
                     </a>
                             </div>
-                            <div id="collapseFive" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
+                            <div id="collapseFive" className="collapse" data-parent="#accordion">
+                                <div className="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
-                                    <i class="pyt-badge-24"></i> Mobile App Development
+                        <div className="card">
+                            <div className="card-header">
+                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                                    <i className="pyt-badge-24"></i> Mobile App Development
                     </a>
                             </div>
-                            <div id="collapseSix" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
+                            <div id="collapseSix" className="collapse" data-parent="#accordion">
+                                <div className="card-body">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                             </div>

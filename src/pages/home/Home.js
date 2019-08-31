@@ -14,9 +14,13 @@ import { bindActionCreators } from 'redux';
 import getUserDetails from "../../redux/actions/getUserDetails";
 import AboutUS from "./AboutUS";
 import OurGoal from "./OurGoals";
+import { removeClass } from "../../helper/utils/removeClass";
+import { removeClass } from "../../helper/utils/removeClass";
 function HomePage(props) {
   useEffect(() => {
-    if (!props.tutorCode) {
+    removeClass('TAG', 'body', 'show-modal');
+    removeClass('CLASS', 'bg-overlay', 'pdg-overlay');
+    if (!props.code) {
         props.getUserDetails();
     }
   }, [])
@@ -59,9 +63,9 @@ const mapDispatchToProps = dispatch => {
 };
 
 function mapStateToProps({ app = {} }) {
-  const { tutorCode = '' } = app;
+  const { code = '' } = app;
   return {
-    tutorCode
+    code
   };
 }
 
