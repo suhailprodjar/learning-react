@@ -1,10 +1,12 @@
 .home {
-  background-image: url(https://i.imgur.com/ynRFy1C.png), url(https://i.imgur.com/6GxXiOS.png);
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 40%, bottom;
+  @media($md){
+    background-image: url(https://i.imgur.com/ynRFy1C.png), url(https://i.imgur.com/6GxXiOS.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 40%, contain;
+    background-position: 50% 38%, bottom;
+  }
 
   h3 {
     &.heading-txt {
@@ -57,6 +59,7 @@
       min-height: 460px;
       display: flex;
       align-items: center;
+      margin-bottom: 0;
     }
     @media ($md) {
       min-height: 660px;
@@ -225,7 +228,9 @@
         }
 
         @media ($md) {
-          line-height: 40px;
+          font-weight: 600;
+          line-height: 38px;
+          font-size: 20px;
         }
 
         &:before {
@@ -234,6 +239,10 @@
           color: #fff;
           z-index: 1;
           margin-left: -8px;
+
+          @media ($md) {
+            margin-left: -10px
+          }
         }
         &:after{
           content: '';
@@ -289,10 +298,11 @@
   .quality-courses {
     position: relative;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 72px;
 
     @media ($sm) {
-      margin-bottom: 104px;
+      padding-top: 148px;
+      margin-bottom: 0;
     }
   }
   // common css ends
@@ -303,47 +313,47 @@
         content: "";
         background: url(https://i.imgur.com/SUrsQCS.png) no-repeat center top /
           cover;
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         display: inline-block;
         position: absolute;
         top: 0;
-        right: -20px;
+        right: -56px;
         border-radius: 100%;
         z-index: -1;
       }
-    }
-
-    .card-wrap {
-      @media($sm){
-        &:hover {
-          box-shadow: 10px 10px 22px rgba(0, 0, 0, 0.1);
-        }
+      @media($md){
+        width: 180px;
+        height: 180px;
       }
     }
   }
 
   .quality-courses {
     @media ($sm) {
-      &:before,
-      &:after {
+      margin-bottom: 218px;      
+    }
+    &:before {
+      @media ($sm) {
         content: "";
         background: url(https://i.imgur.com/SUrsQCS.png) no-repeat center top /
           cover;
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         display: inline-block;
         position: absolute;
-        left: -20px;
+        left: -56px;
         border-radius: 100%;
         z-index: -1;
       }
-      &:before {
-        top: 0;
+
+      @media($md){
+        width: 180px;
+        height: 180px;
       }
-      &:after {
-        bottom: 0;
-      }
+    }
+    &:before {
+      top: 0;
     }
 
     .card-wrap {
@@ -448,17 +458,35 @@
 
         .card-body {
           font-size: 13px;
-          line-height: 20px;
+          line-height: 24px;
         }
       }
     }
   }
 
   .about-us {
-    margin: 40px 0 32px;
-
     @media ($sm) {
-      margin-top: 104px;
+      margin: 40px 0 72px;
+      position: relative;
+      margin-bottom: 220px;
+    }
+
+    &:after {
+      content: "";
+      background: url(https://i.imgur.com/SUrsQCS.png) no-repeat center top /
+        cover;
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+      position: absolute;
+      left: -56px;
+      bottom: 0;
+      border-radius: 100%;
+      z-index: -1;
+      @media($md){
+        width: 180px;
+        height: 180px;
+      }
     }
 
     .pl-40 {
@@ -473,10 +501,10 @@
     }
 
     &.our-goal {
-      margin-top: 80px;
-
       @media($sm) {
-        margin-top: 160px;
+        &:after {
+          display: none;
+        }
       }
 
       [class*="col-"] {
@@ -499,7 +527,7 @@
       z-index: 1;
       padding-top: 32px;
       @media ($sm) {
-        padding-top: 40px;
+        padding-top: 56px;
       }
 
       &:before {
@@ -517,7 +545,7 @@
 
         @media ($sm) {
           text-align: left;
-          font-size: 70px;
+          font-size: 96px;
         }
       }
 
@@ -562,15 +590,15 @@
   }
 
   .testimonial {
-    margin-bottom: 64px;
+    margin-bottom: 72px;
 
     @media ($sm) {
-      margin-bottom: 80px;
+      margin-bottom: 128px;
     }
 
     .testimonial-card {
       position: relative;
-      padding-top: 40px;
+      padding-top: 46px;
       margin-bottom: 40px;
       @media ($sm) {
         padding-top: 56px;
@@ -620,8 +648,8 @@
           padding-left: 80px;
           min-height: 64px;
           margin-bottom: 0;
-          font-size: 10px;
-          line-height: 15px;
+          font-size: 12px;
+          line-height: 14px;
 
           @media ($sm) {
             font-size: 11px;
