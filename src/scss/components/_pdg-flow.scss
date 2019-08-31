@@ -53,8 +53,8 @@
         padding: 12px 48px 12px 12px;
         outline: 0 none;
         border: 0;
-        font-size: 11px;
-        line-height: 16px;
+        font-size: 13px;
+        line-height: 19px;
 
         @media ($sm) {
           font-size: 18px;
@@ -68,7 +68,7 @@
         padding-left: 32px;
         position: relative;
         color: rgba(255, 255, 255, 0.8);
-        font-size: 11px;
+        font-size: 13px;
         line-height: 19px;
         @media ($sm) {
           padding-left: 56px;
@@ -97,6 +97,43 @@
             margin-bottom: 8px;
             font-size: 16px;
             line-height: 24px;
+          }
+        }
+      }
+
+      &.in {
+        .dropdown-list {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+
+      .dropdown-list {
+        width: 100%;
+        margin-bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-32px);
+        transition: opacity 0.4s, transform 0.4s ease-in-out;
+        font-size: 13px;
+
+        @media($sm) {
+          font-size: 15px;
+        }
+
+        li {
+          display: block;
+          padding: 16px 24px;
+          cursor: pointer;
+          background: #1f1827;
+          color: #Fafafa;
+          box-shadow: inset 0 -1px 0px 0px rgba(250, 250, 250, 0.1);
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            padding-left: 32px;
+            box-shadow: inset 0 -1px 0px 0px rgba(250, 250, 250, 0.5);
           }
         }
       }
@@ -175,12 +212,8 @@
 
       .form-wrapper {
         color: #ffffff;
-        font-size: 11px;
-        line-height: 16px;
-        @media ($sm) {
-          font-size: 13px;
-          line-height: 19px;
-        }
+        font-size: 13px;
+        line-height: 19px;
 
         .form-group {
           margin-bottom: 24px;
@@ -192,8 +225,8 @@
             height: 40px;
             padding: 16px;
             outline: 0 none;
-            font-size: 12px;
-            line-height: 24px;
+            font-size: 13px;
+            line-height: 19px;
             color: #ffffff;
 
             @media ($sm) {
@@ -218,7 +251,7 @@
               width: 40px;
               height: 40px;
               text-align: center;
-              font-size: 12px;
+              font-size: 13px;
               line-height: 40px;
               border-right: 1px solid #ffffff;
 
@@ -484,14 +517,9 @@
       p {
         text-align: center;
         color: #494055;
-        font-size: 8px;
-        line-height: 12px;
+        font-size: 13px;
+        line-height: 19px;
         margin-bottom: 0;
-
-        @media ($sm) {
-          font-size: 9px;
-          line-height: 13px;
-        }
 
         span {
           font-weight: 600;
