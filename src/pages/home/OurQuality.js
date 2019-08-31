@@ -1,7 +1,91 @@
-import React from 'react';
-import AboutUS from './AboutUS';
-import OurGoal from './OurGoals';
+import React, { useState } from 'react';
 import isMobile from '../../helper/utils/isMobile';
+
+
+function MobileAccordian() {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isCollapsing, setCollapsing] = useState(false);
+    const [height, setHeight] = useState('0px');
+    const handleClick = (value) => {
+        setCollapsing(true);
+        setTimeout(() => {
+            setHeight('0px');
+            setActiveIndex(value === activeIndex ? null : value);
+            setCollapsing(true);
+            setTimeout(() => {
+                setHeight('112px');
+            }, 100);
+            setTimeout(() => {
+                setCollapsing(false);
+            }, 500)
+        }, 100);
+    }
+    return (
+        <div class="quality-accordian" id="accordion">
+            <div class="card" onClick={() => handleClick(0)}>
+                <div class="card-header">
+                    <a class={`card-link ${activeIndex === 0 ? '' : 'collapsed'}`}
+                        data-toggle="collapse" href="#collapseOne" onClick={e => e && e.preventDefault()} aria-expanded={activeIndex === 0}>
+                        <i class="pyt-badge-24"></i> Enterprise Software Development
+                    </a>
+                </div>
+                <div id="collapseOne" className={
+                    `${isCollapsing && activeIndex === 0 ? 'collapsing' : `${activeIndex === 0 ? 'collapse show' : 'collapse'}`
+                    }`}
+                    data-parent="#accordion" style={
+                        isCollapsing ? { height } : {}
+                    }>
+                    <div className="card-body">
+                        Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" onClick={() => handleClick(1)}>
+                <div class="card-header">
+                    <a class={`card-link ${activeIndex === 1 ? '' : 'collapsed'}`}
+                        data-toggle="collapse" href="#collapseTwo" onClick={e => e && e.preventDefault()} aria-expanded={activeIndex === 1}>
+                        <i class="pyt-badge-24"></i> Enterprise Software Development
+                    </a>
+                </div>
+                <div id="collapseTwo" className={
+                    `${isCollapsing && activeIndex === 1 ? 'collapsing' : `${activeIndex === 1 ? 'collapse show' : 'collapse'}`
+                    }`}
+                    data-parent="#accordion" style={
+                        isCollapsing ? { height } : {}
+                    }>
+                    <div className="card-body">
+                        Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onClick={() => handleClick(2)}>
+                <div class="card-header">
+                    <a class={`card-link ${activeIndex === 2 ? '' : 'collapsed'}`}
+                        data-toggle="collapse" href="#collapseThree" onClick={e => e && e.preventDefault()} aria-expanded={activeIndex === 2}>
+                        <i class="pyt-badge-24"></i> Enterprise Software Development
+                    </a>
+                </div>
+                <div id="collapseThree" className={
+                    `${isCollapsing && activeIndex === 2 ? 'collapsing' : `${activeIndex === 2 ? 'collapse show' : 'collapse'}`
+                    }`}
+                    data-parent="#accordion" style={
+                        isCollapsing ? { height } : {}
+                    }>
+                    <div className="card-body">
+                        Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    )
+}
 
 function Quality() {
     return (
@@ -16,81 +100,8 @@ function Quality() {
                     devlopment and marketing, content writing etc.
                 </p>
                 {isMobile() ?
-                    <div class="quality-accordian" id="accordion">
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false">
-                                    <i class="pyt-badge-24"></i> Enterprise Software Development
-                    </a>
-                            </div>
-                            <div id="collapseOne" className="collapse" data-parent="#accordion" style={{}}>
-                                <div className="card-body">
-                                    Create complex enterprise software, ensure reliable software integration, modernise your legacy system.
-                    </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <a className="card-link collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">
-                                    <i className="pyt-badge-24"></i> Mobile App Development
-                    </a>
-                            </div>
-                            <div id="collapseTwo" className="collapse" data-parent="#accordion" style={{}}>
-                                <div className="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                                    <i className="pyt-badge-24"></i> UX / UI Design
-                    </a>
-                            </div>
-                            <div id="collapseThree" className="collapse" data-parent="#accordion">
-                                <div className="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseFour">
-                                    <i className="pyt-badge-24"></i> Mobile App Development
-                    </a>
-                            </div>
-                            <div id="collapseFour" className="collapse" data-parent="#accordion">
-                                <div className="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseFive">
-                                    <i className="pyt-badge-24"></i> UX / UI Design
-                    </a>
-                            </div>
-                            <div id="collapseFive" className="collapse" data-parent="#accordion">
-                                <div className="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                            </div>
-                        </div>
-                        <div className="card">
-                            <div className="card-header">
-                                <a className="collapsed card-link" data-toggle="collapse" href="#collapseSix">
-                                    <i className="pyt-badge-24"></i> Mobile App Development
-                    </a>
-                            </div>
-                            <div id="collapseSix" className="collapse" data-parent="#accordion">
-                                <div className="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    : 
+                    <MobileAccordian />
+                    :
                     <div className="row">
                         <div className="col-12 col-sm-4">
                             <div className="card-wrap">
@@ -159,7 +170,7 @@ function Quality() {
                             </div>
                         </div>
                     </div>
-                }    
+                }
             </div>
         </div>
     )
