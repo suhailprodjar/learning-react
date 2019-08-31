@@ -31,9 +31,9 @@
           <div class="pdg-modal-body">
             <!-- pdg 1 -->
             <h2>Find Tutors, Trainers &amp; Institutes near you.</h2>
-            <div class="clearfix search-form in">
+            <div class="clearfix search-form">
               <div class="form-group">
-                <input type="text" name="" placeholder="Enter categories e.g. Maths, Java, French" value="" />
+                <input class="pdg-search" type="text" name="" placeholder="Enter categories e.g. Maths, Java, French" value="" />
                 <i class=" pyt-search-24"></i>
               </div>
               <ul class="dropdown-list list-unstyled">
@@ -66,6 +66,13 @@
     $(".pdg-close").click(function () {
       $("body").removeClass("show-modal");
     });
+
+    $(".pdg-search").focus(function(){
+      $(this).parent().parent().addClass("in");
+    })
+    .blur(function(){
+      $(this).parent().parent().removeClass("in");
+    })
   });
 </script>
 

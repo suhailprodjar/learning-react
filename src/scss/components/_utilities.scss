@@ -136,3 +136,41 @@
     }
   }
 }
+
+/** 
+  LODING BUTTON
+  {btn} classname - Required
+  {isloading} classname - Added this classname enabled for Loading animations.
+*/
+
+.btn {
+  &.isloading {
+    position: relative;
+    padding-right: 40px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      margin-top: -9px;
+      width: 18px;
+      height: 18px;
+      border: 3px solid;
+      border-left-color: transparent;
+      border-radius: 100%;
+      animation: spin 1s linear infinite;
+      opacity: 0.6;
+    }
+  }
+}
+
+// SPIN ANIMATIONS
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } 
+}
