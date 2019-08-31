@@ -11,3 +11,6 @@
 
 # css
 *.css
+
+#env
+.env

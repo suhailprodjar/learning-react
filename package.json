@@ -1,6 +1,7 @@
 {
   "name": "learning-web",
   "version": "0.1.0",
+  "proxy": "https://learning-backend.herokuapp.com/",
   "description": "Front end application for learning-react",
   "engines": {
     "node": "8.15.1"
@@ -16,6 +17,7 @@
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
     "ignore-styles": "^5.0.1",
+    "node-fetch": "^2.6.0",
     "path": "^0.12.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -59,7 +61,7 @@
   },
   "scripts": {
     "set-local": "cp .env.local .env",
-    "set-prod": "cp .env.production .env",
+    "set-prod": "cp .env.prod .env",
     "build": "yarn set-prod && yarn css && react-scripts build",
     "start": "NODE_ENV=production node server/bootstrap.js",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
@@ -67,7 +69,8 @@
     "css": "yarn build-css && yarn public-css",
     "local-start": "yarn set-local && react-scripts start",
     "public-sync": "yarn css && yarn browser-sync start -s --serveStatic 'public' --files 'public' --port 4000",
-    "log": "heroku logs --tail -a learning-frontend"
+    "log": "heroku logs --tail -a learning-frontend",
+    "backend-log": "heroku logs --tail -a learning-backend"
   },
   "eslintConfig": {
     "extends": "react-app"

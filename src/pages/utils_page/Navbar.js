@@ -29,7 +29,7 @@ function NavBar(props) {
                     </div>
                     <div className="col-12 col-sm-5 is_mobile text-right">
                         <button className="btn active"
-                            onClick={() => triggerButtonAction(history, '/register-learner')}>
+                            onClick={() => triggerButtonAction(history, '/learner/course')}>
                             Student Register
                         </button>
                         <button className="btn"

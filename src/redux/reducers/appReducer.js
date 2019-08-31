@@ -1,10 +1,22 @@
 
 export default (state = {}, action) => {
-  switch (action.type) {
+  const { type = '', payload = {} } = action;
+  switch (type) {
     case 'TUTOR_CREATED':
-      return action.payload;
+      return payload;
     case 'NOTIFICATION':
-      return action.payload;
+      return payload;
+    case 'LEAD_DETAILS': {
+      if (payload.type === 'USER') {
+        return {
+          ...payload
+        }
+      } else {
+        return {
+          ...payload
+        }
+      }
+    }
     default:
       return state;
   }

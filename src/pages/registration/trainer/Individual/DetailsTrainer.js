@@ -2,31 +2,36 @@ import React, { Component } from 'react';
 import { withLastLocation } from "react-router-last-location";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import withStorage from '../../../../components/Storage';
 
 class DetailTrainer extends Component {
-
+    componentDidMount() {
+        if (!this.props.tutorCode) {
+            this.props.history.replace('/register-trainer')
+        }
+    }
     render() {
         return <div>Details Trainer</div>
     }
 }
 
 function mapStateToProps({ app = {} }) {
-    const { tutorCode = '' } = app;
+    const { tutorCode = '', name } = app;
     return {
         tutorCode,
-        name:
-    };
+        name
+    }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         triggerTutorRegister: bindActionCreators(
-            triggerTutorRegister,
+            () => {},
             dispatch
         )
     };
 };
 
 export default withLastLocation(
-    connect(mapStateToProps, mapDispatchToProps)(DetailTrainer)
+    withStorage(connect(mapStateToProps, mapDispatchToProps)(DetailTrainer))
 );
