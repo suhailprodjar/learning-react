@@ -1,6 +1,4 @@
 import React from 'react';
-import AboutUS from './AboutUS';
-import OurGoal from './OurGoals';
 import isMobile from '../../helper/utils/isMobile';
 
 function Quality() {
