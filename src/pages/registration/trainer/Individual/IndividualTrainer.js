@@ -59,7 +59,7 @@ class IndividualTrainer extends Component {
                 isLoading: true
             }, () => {
                 this.props.triggerTutorRegister(this.state).then(({ code }) => {
-                    this.props.setToStorage('tutor', {
+                    this.props.setToStorage('tutor-details', {
                         code,
                         name,
                         isInstitute

@@ -12,7 +12,7 @@ export default function triggerLearnerRegister(requestData) {
                 response => {
                     if (response.status === 'Created') {
                         dispatch({
-                            type: 'LEARNER_CREATED',
+                            type: 'LEARNER',
                             payload: {
                                 code: response.learnerCode,
                                 status: 'REGISTER_SUCCEED',

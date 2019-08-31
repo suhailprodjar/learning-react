@@ -8,6 +8,7 @@ import { removeClass } from '../../../../helper/utils/removeClass';
 import { checkMandatoryFields } from '../../../../helper/utils/validation';
 import withStorage from '../../../../components/Storage';
 import triggerLearnerRegister from '../../../../redux/actions/triggerLearnerRegister';
+import triggerLearnerDetails from '../../../../redux/actions/triggerLearnerDetails';
 class Register extends Component {
 
     state = {
@@ -28,7 +29,6 @@ class Register extends Component {
 
     onChangeAction = (e) => {
         e && e.preventDefault();
-        const { history } = this.props;
         const { name = '', value = '' } = e.target;
         if (this.state.hasError) {
             const validation = checkMandatoryFields({ ...this.state, [name]: value });
@@ -37,21 +37,36 @@ class Register extends Component {
             this.setState({ [name]: value });
         }
     }
+
+    triggerLearnerDetails = (learnerCode) => {
+        const { history = {} } = this.props;
+        const { state = {} } = history.location;
+        const { course, location, mode } = state;
+        this.props.triggerLearnerDetails({
+            learnerCode,
+            course,
+            location,
+            mode
+        }).then(() => {
+            this.closeModal();
+        }).catch(() => {
+            this.closeModal();
+        })
+    } 
     onSubmit = (e) => {
         e && e.preventDefault();
         const { name } = this.state;
-        debugger
         const validation = checkMandatoryFields(this.state);
         if (!validation.hasError) {
             this.setState({
                 isLoading: true
             }, () => {
                 this.props.triggerLearnerRegister(this.state).then(({ code }) => {
-                    this.props.setToStorage('learner', {
+                    this.props.setToStorage('learner-details', {
                         code,
                         name
                     });
-                    this.closeModal()
+                    this.triggerLearnerDetails(code);
                 });
             })
         } else {
@@ -111,6 +126,10 @@ const mapDispatchToProps = dispatch => {
     return {
         triggerLearnerRegister: bindActionCreators(
             triggerLearnerRegister,
+            dispatch
+        ),
+        triggerLearnerDetails: bindActionCreators(
+            triggerLearnerDetails,
             dispatch
         )
     };
