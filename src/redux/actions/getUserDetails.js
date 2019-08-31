@@ -2,7 +2,7 @@ export default function getUserDetails() {
     const user = JSON.parse(localStorage.getItem('learner-details'));
     const tutor = JSON.parse(localStorage.getItem('tutor-details'));
     return dispatch => {
-        if (user && user.userCode) {
+        if (user && user.code) {
             dispatch({
                 type: 'LEARNER',
                 payload: {

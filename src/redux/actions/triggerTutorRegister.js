@@ -21,6 +21,15 @@ export default function triggerTutorRegister(requestData) {
                                 name: requestData.name
                             }
                         });
+                        dispatch({
+                            type: 'NOTIFICATION',
+                            payload: {
+                                messageText: 'Thanks for your registration',
+                                isIdle: false,
+                                buttonText: null,
+                                buttonAction: null
+                            }
+                        });
                         res({ code: response.tutorCode});
                     }
                     res('Promised resolved from fetch');
@@ -30,7 +39,7 @@ export default function triggerTutorRegister(requestData) {
                         dispatch({
                             type: 'NOTIFICATION',
                             payload: {
-                                messageText: 'Sorry for this.. Your mobile number already registered'
+                                messageText: 'Your mobile number already registered'
                             }
                         })
                     }

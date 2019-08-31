@@ -4,20 +4,34 @@ import withStorage from '../../../../components/Storage';
 import { PDGContext } from '../PDGContext';
 import Header from './Header';
 import Footer from './Footer';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import triggerLearnerDetails from '../../../../redux/actions/triggerLearnerDetails';
+import triggerNotification from '../../../../redux/actions/triggerNotification';
 
 function CourseType(props) {
-    const [{ course = '', location, mode = [] }, dispatch] = useContext(PDGContext);
+    const [{ course = '', location, mode = [], courseItems = [] }, dispatch] = useContext(PDGContext);
     useEffect(() => {
+        if (courseItems.length) {
+            dispatch({
+                type: 'SELECT_COURSE',
+                payload: {
+                    courseItems: []
+                }
+            });
+        }
         if (!course) {
             props.history.push('/learner/course')
         }
     })
-    const [typesOfInterest, setValue] = useState([]);
+    const [typesOfInterest, setValue] = useState(mode);
     const getIndex = (type) => {
         return typesOfInterest.indexOf(type)
     }
-    
+
     const onSubmit = () => {
+        const { userDetails = {} } = props;
+        const { code = '' } = userDetails;
         dispatch({
             type: 'SELECT_COURSE_TYPE',
             payload: {
@@ -29,21 +43,59 @@ function CourseType(props) {
             location: location,
             mode: typesOfInterest
         });
-        props.history.replace('register', {
-            course,
-            mode : typesOfInterest,
-            location
-        });
+        if (code) {
+            props.triggerLearnerDetails({
+                learnerCode: code,
+                course: [course],
+                location,
+                mode: typesOfInterest
+            }).then(() => {
+                props.history.replace('/');
+            })
+        } else {
+            props.history.replace('register', {
+                course,
+                mode: typesOfInterest,
+                location
+            });
+        }
     }
     const onChangeAction = (e, type) => {
         e && e.preventDefault();
         const index = getIndex(type);
+        const { userDetails = {} } = props;
+        const { code = '' } = userDetails;
+        let modeValues = [];
         if (index === -1) {
-            setValue([...typesOfInterest, type])
+            modeValues = [...typesOfInterest, type];
+            setValue(modeValues);
+            dispatch({
+                type: 'MODE_GENERATED',
+                payload: {
+                    mode: modeValues
+                }
+            });
         } else {
             let interests = typesOfInterest;
             interests.splice(index, 1);
-            setValue([...interests])
+            modeValues = [...interests];
+            setValue(modeValues)
+            dispatch({
+                type: 'MODE_GENERATED',
+                payload: {
+                    mode: modeValues
+                }
+            })
+        }
+        if (modeValues.length) {
+            props.notificationHandler({
+                messageText: `${code ? 'Awesome! Let’s roll right-away!...' : 'Ah, that’s some quality stuff mate!...'}`,
+                isIdle: true,
+                buttonText: `${code ? 'Callback' : 'Register'}`,
+                buttonAction: onSubmit
+            })
+        } else {
+            props.notificationHandler({})
         }
     }
     return (
@@ -102,6 +154,27 @@ function CourseType(props) {
         </div>
     )
 }
+
+function mapStateToProps({ app = {} }) {
+    const { userDetails = {} } = app;
+    return {
+        userDetails
+    };
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        triggerLearnerDetails: bindActionCreators(
+            triggerLearnerDetails,
+            dispatch
+        ),
+        notificationHandler: bindActionCreators(
+            triggerNotification,
+            dispatch
+        )
+    };
+};
+
 export default withLastLocation(
-    withStorage(CourseType)
+    withStorage(connect(mapStateToProps, mapDispatchToProps)(CourseType))
 );
