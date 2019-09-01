@@ -10,7 +10,7 @@ export function removeClass(tag = 'CLASS', keyValue = '', className = '') {
             default:
                 document.getElementById(keyValue).classList.remove(className);
         }
-    } catch {
-
+    } catch(e) {
+        console.log(e);
     }
 }

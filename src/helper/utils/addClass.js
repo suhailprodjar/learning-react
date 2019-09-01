@@ -10,5 +10,7 @@ export function addClass(tag = 'CLASS', keyValue = '', className = '') {
             default:
                 document.getElementById(keyValue).classList.add(className);
         }
-    } catch { }
+    } catch (err) {
+        console.log(err);
+    }
 }
