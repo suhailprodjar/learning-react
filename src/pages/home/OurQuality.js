@@ -7,18 +7,15 @@ function MobileAccordian() {
     const [isCollapsing, setCollapsing] = useState(false);
     const [height, setHeight] = useState('0px');
     const handleClick = (value) => {
+        setActiveIndex(value === activeIndex ? null : value);
         setCollapsing(true);
         setTimeout(() => {
-            setHeight('0px');
-            setActiveIndex(value === activeIndex ? null : value);
-            setCollapsing(true);
-            setTimeout(() => {
-                setHeight('112px');
-            }, 100);
-            setTimeout(() => {
-                setCollapsing(false);
-            }, 500)
+            setHeight('112px');
         }, 100);
+        setTimeout(() => {
+            setCollapsing(false);
+            setHeight('0px');
+        }, 500)
     }
     return (
         <div class="quality-accordian" id="accordion">

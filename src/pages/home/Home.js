@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 import HomeBanner from "./HomeBanner";
 import HowToWorks from "./OurWorks";
 import Quality from "./OurQuality";
 import Testimonials from "./Reviews";
 import Header from './Helmet';
-import IndividualTrainer from "../registration/trainer/Individual/IndividualTrainer";
-import InstituteTrainer from "../registration/trainer/Institute/InstituteTrainer";
-import DetailTrainer from "../registration/trainer/Individual/DetailsTrainer";
+import Register from "../registration/trainer/Register";
+import DetailTrainer from "../registration/trainer/Individual/DetailTrainer";
 import DetailInstitute from "../registration/trainer/Institute/DetailInstitute";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -16,6 +15,8 @@ import AboutUS from "./AboutUS";
 import OurGoal from "./OurGoals";
 import { removeClass } from "../../helper/utils/removeClass";
 import Learner from "../registration/learner/Learner";
+import Navbar from "../utils_page/Navbar";
+import Footer from "../utils_page/Footer";
 function HomePage(props) {
   useEffect(() => {
     removeClass('TAG', 'body', 'show-modal');
@@ -26,34 +27,35 @@ function HomePage(props) {
     }
   }, [])
   return (
-    <div className="home">
-      <Header />
-      <HomeBanner />
-      <HowToWorks />
-      <Quality />
-      <AboutUS />
-      <OurGoal />
-      <Testimonials />
-      <Switch>
-        <Route path="/register-trainer"
-          exact={true}
-          component={IndividualTrainer}
-        />
-        <Route path="/register-institute"
-          exact={true}
-          component={InstituteTrainer}
-        />
-        <Route path="/register-trainer-details"
-          exact={true}
-          component={DetailTrainer} />
-        <Route path="/register-institute-details"
-          exact={true}
-          component={DetailInstitute} />
-        <Route path="/learner/*"
-          exact={true}
-          component={Learner} />
-      </Switch>
-    </div>
+    <Fragment>
+      <Navbar />
+      <div className="home">
+        <Header />
+        <HomeBanner />
+        <HowToWorks />
+        <Quality />
+        <AboutUS />
+        <OurGoal />
+        <Testimonials />
+        <Switch>
+          <Route path="/register-trainer"
+            exact={true}
+            component={Register}
+          />
+          <Route path="/register-trainer-details"
+            exact={true}
+            component={DetailTrainer} />
+          <Route path="/register-institute-details"
+            exact={true}
+            component={DetailInstitute} />
+          <Route path="/learner/*"
+            exact={true}
+            component={Learner} />
+        </Switch>
+      </div>
+      <Footer />
+      <div className="bg-overlay"></div>
+    </Fragment>
   );
 }
 

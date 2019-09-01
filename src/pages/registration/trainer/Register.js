@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { withLastLocation } from "react-router-last-location";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import triggerTutorRegister from '../../../../redux/actions/triggerTutorRegister';
-import { checkMandatoryFields } from '../../../../helper/utils/validation';
-import withStorage from '../../../../components/Storage';
-import { addClass } from '../../../../helper/utils/addClass';
-import { removeClass } from '../../../../helper/utils/removeClass';
-class IndividualTrainer extends Component {
+import triggerTutorRegister from '../../../redux/actions/triggerTutorRegister';
+import { checkMandatoryFields } from '../../../helper/utils/validation';
+import withStorage from '../../../components/Storage';
+import { addClass } from '../../../helper/utils/addClass';
+import { removeClass } from '../../../helper/utils/removeClass';
+class Register extends Component {
     state = {
         name: '',
         email: '',
@@ -64,12 +64,22 @@ class IndividualTrainer extends Component {
                         name,
                         isInstitute
                     });
-                    this.closeModal('/register-trainer-details')
+                    this.closeModal(
+                        isInstitute ?
+                            '/register-institute-details' :
+                            '/register-trainer-details'
+                    )
                 });
             })
         } else {
             this.setState(validation)
         }
+    }
+    onChangeTrainerType = (value) => {
+        this.setState({
+            isInstitute: value,
+            instituteName: ''
+        });
     }
     render() {
         const {
@@ -77,6 +87,8 @@ class IndividualTrainer extends Component {
             email = '',
             mobileNumber = '',
             location = '',
+            isInstitute,
+            instituteName = '',
             hasError = false,
             emailError = false,
             nameError = false,
@@ -97,6 +109,30 @@ class IndividualTrainer extends Component {
                             <div className="rg-modal-form">
                                 <p className="heading-txt">Sign up as a tutor</p>
                                 <form>
+                                    <div className="form-group mb-24">
+                                        <label for="opt1" className="control-option">
+                                            <input name="option1" id="opt1" type="radio" value="option" checked={!isInstitute} onChange={() => this.onChangeTrainerType(false)} />
+                                            <span>I am an individual</span>
+                                            <i className="tick-icon"></i>
+                                        </label>
+                                        <label for="opt2" className="control-option">
+                                            <input name="option1" id="opt2" type="radio" value="option" checked={isInstitute} onChange={() => this.onChangeTrainerType(true)} />
+                                            <span>I run a institute</span>
+                                            <i className="tick-icon"></i>
+                                        </label>
+                                    </div>
+                                    {
+                                        isInstitute ? <div className="form-group">
+                                            <input
+                                                type="text"
+                                                placeholder="Institute Name"
+                                                name="instituteName"
+                                                value={instituteName}
+                                                onChange={this.onChangeAction}
+                                                required
+                                            />
+                                        </div> : null
+                                    }
                                     <div className="form-group">
                                         <input
                                             className={`${hasError && nameError ? 'has-error' : ''}`}
@@ -119,25 +155,28 @@ class IndividualTrainer extends Component {
                                             required
                                         />
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group mbl-no">
                                         <input
                                             type="mobileNumber"
                                             className={`${hasError && mobileError ? 'has-error' : ''}`}
-                                            placeholder="Enter your contact no Eg: +91-9715626138"
+                                            placeholder="Enter your contact no Eg: 9715626138"
                                             name="mobileNumber"
                                             value={mobileNumber}
-                                            pattern="+[0-9]{2}-[0-9]{10}"
+                                            pattern="[0-9]{10}"
                                             onChange={this.onChangeAction}
                                             required
                                         />
+                                        <span>+91</span>
                                     </div>
-                                    <div className="form-group">
-                                        <select name={'gender'} onChange={this.onChangeAction}>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
+                                    {isInstitute ? null : <div className="form-group">
+                                        <div className="control-select">
+                                            <select name={'gender'} onChange={this.onChangeAction}>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>}
                                     <div className="form-group">
                                         <input
                                             type="text"
@@ -179,5 +218,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default withLastLocation(
-    withStorage(connect(null, mapDispatchToProps)(IndividualTrainer))
+    withStorage(connect(null, mapDispatchToProps)(Register))
 );

@@ -7,7 +7,8 @@ export function validateEmail(email) {
 }
 
 export function validateMobile(number) {
-    return number.length === 10;
+    let reg = new RegExp(/^\d+$/);
+    return number.length === 10 && reg.test(number);
 }
 
 export function checkMandatoryFields({ email, name, mobileNumber}) {

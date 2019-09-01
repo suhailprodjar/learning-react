@@ -12,8 +12,8 @@ function Notification({
     if (messageText) {
         if (!isIdle) {
             setTimeout(() => {
-                notificationHandler()
-            }, 5000)
+                notificationHandler({})
+            }, 2000)
         }
     }
     return (
