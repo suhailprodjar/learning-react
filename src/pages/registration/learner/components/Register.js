@@ -112,7 +112,7 @@ class Register extends Component {
                             </div>
                             <p className={`has-error ${hasError ? '' : 'd-none'}`}>*All fields are mandatory</p>
                             <div className="text-center">
-                                <button onClick={this.onSubmit} className="btn signup-btn">Sign up</button>
+                                <button onClick={this.onSubmit} className="btn primary-btn signup-btn">Sign up</button>
                             </div>
                         </div>
                     </div>
