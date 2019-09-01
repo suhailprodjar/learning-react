@@ -137,13 +137,30 @@
   }
 }
 
-/** 
-  LODING BUTTON
-  {btn} classname - Required
-  {isloading} classname - Added this classname enabled for Loading animations.
-*/
 
+// BUTTON CSS
 .btn {
+  &.primary-btn {
+    background: #1f1827;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 8px 12px;
+    margin-top: 8px;
+
+    @media($md){
+      padding: 10px 16px;
+    }
+  }
+  
+  /** 
+    LODING BUTTON
+    {btn} classname - Required
+    {isloading} classname - Added this classname enabled for Loading animations.
+  */
   &.isloading {
     position: relative;
     padding-right: 40px;

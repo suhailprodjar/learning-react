@@ -47,6 +47,13 @@ a:focus {
   text-decoration: none;
   outline: 0 none;
 }
+button {
+  &.btn {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
 b,
 strong {
   @extend .bold;
