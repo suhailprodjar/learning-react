@@ -85,7 +85,8 @@ class DetailTrainer extends Component {
             enquireDistance = 5,
             speak,
             mode,
-            experience
+            experience,
+            degree
         } = this.state;
         const validation = this.checkMandatoryFields();
         if (!validation.hasError) {
@@ -94,7 +95,8 @@ class DetailTrainer extends Component {
                 enquireDistance,
                 experience: +experience,
                 speak: speak.length ? speak : ['English'],
-                mode: mode.length ? mode : ['Institute']
+                mode: mode.length ? mode : ['Institute'],
+                degree: degree
             }).then(() => this.closeModal()).catch(() => this.closeModal())
         } else {
             this.setState(validation)
