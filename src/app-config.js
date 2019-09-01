@@ -11,7 +11,8 @@ switch (NODE_ENV) {
 
 export const AppConfig = {
     api_url: API_URL,
-    product: "Learning Grow",
+    product_title: "Learning Grow",
     shortDesc: "",
-    socket_url: ""
+    socket_url: "",
+    ogimage_url: ""
 };
