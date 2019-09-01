@@ -174,3 +174,183 @@
     transform: rotate(360deg);
   } 
 }
+
+// FORM ELEMENTS CSS
+select,
+input {
+  width: 100%;
+  border: 1px solid rgba(32, 25, 40, 0.2);
+  outline: 0;
+  font-size: 13px;
+  line-height: 19px;
+  color: #1f1827;
+  height: 40px;
+  padding: 8px;
+
+  @media ($sm) {
+    height: 56px;
+    padding: 12px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+input {
+  &::placeholder {
+    color: rgba(32, 25, 40, 0.5);
+  }
+}
+
+.mbl-no {
+  position: relative;
+
+  input {
+    padding-left: 48px;
+
+    @media ($sm) {
+      padding-left: 56px;
+    }
+    @media ($sm) {
+      padding-left: 64px;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    line-height: 22px;
+    color: #201928;
+    height: 40px;
+
+    @media ($sm) {
+      height: 56px;
+      line-height: 3;
+      padding: 8px 14px;
+    }
+    @media ($md){
+      line-height: 3.2;
+      padding: 8px 18px;
+    }
+  }
+}
+
+label {
+  &.control-label {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #767676;
+  }
+  &.control-option {
+    position: relative;
+    padding-left: 32px;
+    margin-right: 16px;
+
+    input {
+      display: none;
+
+      &:checked ~ i.tick-icon:before {
+        content: '\e910';
+        background: #201928;
+        font-family: 'pyticon';
+        color: #FFF;
+      }
+
+      &:checked ~ i.radio-icon:before {
+        content: '\e927';
+        font-family: 'pyticon';
+        color: #1F1827;
+      }
+    }
+    span {
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 19px;
+    }
+    i {
+      position: absolute;
+      left: 0;
+      line-height: 1;
+
+      &:before{
+        font-family: 'pyticon';
+        font-style: normal;
+        font-size: 16px;
+        line-height: 16px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      &.radio-icon {
+        top: 3px;
+
+        &:before{
+          content: '\e93b';
+        }
+      }
+
+      &.tick-icon {
+        top: 3px;
+
+        &:before{
+          content: '';
+          height: 16px;
+          width: 16px;
+          border-radius: 100%;
+          font-size: 14px;
+          display: inline-block;
+          background: #aaaaaa;
+        }
+      }
+
+    }
+  }
+}
+
+.control-select {
+  position: relative;
+
+  &:after {
+    content: '\e957';
+    font-family: 'pyticon';
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    margin-top: -8px;
+    line-height: 1;
+    font-size: 16px;
+    color: #1F1827;
+    pointer-events: none;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    border: 1px solid rgba(32, 25, 40, 0.2);
+    background: transparent;
+    border-radius: 0;
+    color: #1f1827;
+
+    &:invalid , option:first-child{
+      color: rgba(32, 25, 40, 0.5);
+    }
+  }
+}
+
+// ERROR CSS
+.has-error {
+  .control-select select, input, span {
+    border-color: #f44336 !important;
+  }
+}
+.has-success {
+  .control-select select, input, span {
+    border-color: #1cad45;
+  }
+}
