@@ -10,7 +10,7 @@ import searchCourse from '../learner-helper/searchCourse';
 function Course(props) {
     const [{ courseItems = [], course, location, mode = [] }, dispatch] = useContext(PDGContext);
     const [searchValue, setValue] = useState('');
-   
+
     const onSubmit = (value) => {
         value = value ? value : searchValue;
         dispatch({

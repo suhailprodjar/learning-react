@@ -7,10 +7,10 @@ import Footer from "./pages/utils_page/Footer";
 import isServer from "./helper/utils/isServer";
 import isMobile from "./helper/utils/isMobile";
 import Notification from "./components/Notification";
-import Learner from './pages/registration/learner/Learner'
 import Navbar from "./pages/utils_page/Navbar";
 import { removeClass } from "./helper/utils/removeClass";
 import { addClass } from "./helper/utils/addClass";
+import NotFound from "./pages/utils_page/NotFound";
 class App extends Component {
 
   componentDidMount = () => {
@@ -28,22 +28,10 @@ class App extends Component {
         <Navbar />
         <ErrorBoundary>
           <Switch>
-            <Route path="/"
+            <Route path="/404"
               exact={true}
-              component={HomePage} />
-            <Route path="/learner/*"
-              exact={true}
-              component={Learner} />
-            <Route path="/register-trainer"
-              exact={true}
-              component={HomePage} />
-            <Route path="/register-trainer-details"
-              exact={true}
-              component={HomePage} />
-            <Route path="/register-institute"
-              exact={true}
-              component={HomePage} />
-            <Route path="/register-institute-details"
+              component={NotFound} />
+            <Route path="/*"
               exact={true}
               component={HomePage} />
           </Switch>

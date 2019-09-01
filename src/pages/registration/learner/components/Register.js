@@ -44,7 +44,7 @@ class Register extends Component {
         const { course, location, mode } = state;
         this.props.triggerLearnerDetails({
             learnerCode,
-            course,
+            course: [course],
             location,
             mode
         }).then(() => {

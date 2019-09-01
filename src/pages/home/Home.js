@@ -15,12 +15,14 @@ import getUserDetails from "../../redux/actions/getUserDetails";
 import AboutUS from "./AboutUS";
 import OurGoal from "./OurGoals";
 import { removeClass } from "../../helper/utils/removeClass";
+import Learner from "../registration/learner/Learner";
 function HomePage(props) {
   useEffect(() => {
     removeClass('TAG', 'body', 'show-modal');
     removeClass('CLASS', 'bg-overlay', 'pdg-overlay');
-    if (!props.code) {
-        props.getUserDetails();
+    const { code = '' } = props.userDetails || {};
+    if (!code) {
+      props.getUserDetails();
     }
   }, [])
   return (
@@ -47,6 +49,9 @@ function HomePage(props) {
         <Route path="/register-institute-details"
           exact={true}
           component={DetailInstitute} />
+        <Route path="/learner/*"
+          exact={true}
+          component={Learner} />
       </Switch>
     </div>
   );
@@ -54,17 +59,18 @@ function HomePage(props) {
 
 const mapDispatchToProps = dispatch => {
   return {
-      getUserDetails: bindActionCreators(
-          getUserDetails,
-          dispatch
-      )
+    getUserDetails: bindActionCreators(
+      getUserDetails,
+      dispatch
+    )
   };
 };
 
 function mapStateToProps({ app = {} }) {
-  const { code = '' } = app;
+  const { userDetails = {}, tutorDetails = {} } = app;
   return {
-    code
+    userDetails,
+    tutorDetails
   };
 }
 
