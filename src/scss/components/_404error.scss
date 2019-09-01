@@ -1,0 +1,86 @@
+.error-content {
+  position: relative;
+  color: #FFFFFF;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  &:before {
+    content: '';
+    background: url(https://i.imgur.com/t3tJHau.jpg) no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center right;
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 20%, transparent 100%);
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 20%, transparent 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 20%, transparent 100%);
+    z-index: -1;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 700;
+    padding-top: 24px;
+    margin-bottom: 24px;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media ($sm) {
+      font-size: 64px;
+      padding-top: 40px;
+      margin-bottom: 32px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      background: #efab4c;
+      width: 120px;
+      height: 4px;
+      position: absolute;
+      top: 0;
+      left: 8px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 24px;
+    padding-right: 8%;
+    margin-bottom: 40px;
+
+    @media ($sm){
+      font-size: 20px;
+      line-height: 32px;
+      padding-right: 24%;
+    }
+  }
+
+  .error-btn {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 6px 24px;
+    @media($sm){
+      padding: 8px 24px;
+    }
+  }
+}
