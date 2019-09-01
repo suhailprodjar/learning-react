@@ -12,7 +12,7 @@ switch (NODE_ENV) {
 export const AppConfig = {
     api_url: API_URL,
     product_title: "Learning Grow",
-    shortDesc: "",
+    shortDesc: "Lorem Ipsum",
     socket_url: "",
-    ogimage_url: ""
+    ogimage_url: "https://i.imgur.com/T8SubeF.png"
 };
