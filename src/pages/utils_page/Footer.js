@@ -10,7 +10,7 @@ function Footer() {
                         <ul className="clearfix ftr-list list-unstyled">
                             <li>
                                 <p>
-                                    <span>LearnGrow</span>
+                                    <span>BusyHubs</span>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Suspendisse iaculis ut diam eget tincidunt. Sed nec elementum
                                     ipsum, eu placerat justo. Integer sollicitudin ultricies

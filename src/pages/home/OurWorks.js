@@ -25,7 +25,7 @@ function HowToWorks({ works }) {
           <div className="col-12">
             <h3 className="heading-txt">How to works?</h3>
             <p className="heading-txt">
-              LearnGrow is India’s largest online platform with a network of
+              BusyHubs is India’s largest online platform with a network of
               most trusted local Tutors across India. Post and connect with
               the tutors in your locality.
             </p>

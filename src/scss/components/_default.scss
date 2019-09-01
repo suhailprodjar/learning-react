@@ -54,6 +54,13 @@ button {
     }
   }
 }
+.hover_underline {
+  &:hover {
+    @media($md) {
+      text-decoration: underline;
+    }
+  }
+}
 b,
 strong {
   @extend .bold;

@@ -606,6 +606,7 @@
       }
 
       .txt {
+        position: relative;
         background: #fefefe;
         box-shadow: 0px 2px 13px rgba(148, 151, 220, 0.4);
         padding: 32px;
@@ -619,12 +620,30 @@
           font-size: 15px;
           line-height: 26px;
         }
+
+        &:after {
+          content: '';
+          background: url(../../../public/images/testimonial-vector.svg) no-repeat;
+          background-size: contain;
+          position: absolute;
+          right: 16px;
+          bottom: 0;
+          width: 40px;
+          height: 40px;
+
+          @media($xs){
+            width: 32px;
+            height: 32px;
+            filter: contrast(.9);
+          }
+        }
       }
 
       .info {
         position: absolute;
         top: 0;
         left: 32px;
+        z-index: 1;
 
         img {
           width: 64px;

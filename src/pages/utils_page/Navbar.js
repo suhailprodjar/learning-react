@@ -26,7 +26,7 @@ function NavBar(props) {
             <div className="container">
                 <div className="row vertical-center">
                     <div className="col-12 col-sm-7">
-                        <a href="/" className="logo">LearnGrow</a>
+                        <a href="/" className="logo">BusyHubs</a>
                     </div>
                     <div className={`col-12 col-sm-5 ${isMobile() ? 'text-center' : 'text-right'}`}>
                         <button className="btn active"
